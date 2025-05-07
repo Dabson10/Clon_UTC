@@ -1,0 +1,1 @@
+Este proyecto tenia como finalidad hacer un clon de Universidad Tres culturas(UTC), en este proyecto veras como se agregaron funcionalidades como carruseles, boton desplegable entre otros, es totalmente responsive.

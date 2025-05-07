@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="es>
+
+<head>
+<meta charset="UTF-8">
+<!-- fUENTES DE TEXTO -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="icon" href="imagenes/utcLogoBlue.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css" />
+<title>Universidad tres culturas</title>
+</head>
+
+<body>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!-- Cabecera principal -->
+    <header>
+        <!-- Este nav contendra en mobil dos cosas el boton de opciones y el 
+        logo y en desktop abra el logo y tres opciones a la derecha -->
+        <nav class="contPrinci">
+            <!-- Este boton tendra un svg en forma de hamburgesa y desplegara el menu -->
+            <button class="opcMenu" id=opcMenu>
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 30 25" width="18"
+                    height="15">
+                    <path
+                        d="M24,3.5c0,.83-.67,1.5-1.5,1.5H1.5c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5H22.5c.83,0,1.5,.67,1.5,1.5ZM6.5,20H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H6.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5ZM14.5,11H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H14.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Z" />
+                </svg>
+            </button>
+            <!-- Este div contendra otro div el cual mostrara el logo de la escuela y contendra 
+            los links que se mostraran en desktop -->
+            <div class="contLogo">
+                <div class="logo"></div>
+            </div>
+            <!-- El siguiente contenedor tendra tres opciones 2 links y un boton
+            este solo aparecera en pantallas grandes -->
+            <!-- El siguiente contenedor en mobiles desaparecera -->
+            <div class="contOpciones">
+                <div class="linkOpc">
+                    <ul class="alumEgre">
+                        <li class="linea">
+                            <a href="https://utc.mx/alumnos" class="linkHBlue"> ALUMNOS </a>
+                        </li>
+                        <li>
+                            <a href="#" class="linkHBlue"> EGRESADOS </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="inforHead">Pedir información</button>
+            </div>
+        </nav>
+        <!-- Para la subcabecera tambien tendremos que crear un div el cual contendra otro nav y este un div 
+        y dentro una lista desordenada la cual contendra dos cosas un div para elementos que apareceran normalmente
+        y otro div para los componentes que apareceran en mobil como pedir informacion, alumnos y egresados. -->
+        <!-- Menu -->
+        <div class="subMenu" id="subMenu">
+            <!-- Este submenu se abrira al presionar el boton del menu de admiciones, 
+            tendra dos class uno para el diseño general y otro especifico para la seccion-->
+            <div class="adminSub secAdmis" id="admisionSubM">
+                <div class="contInfoSubM">
+                    <div class="contTit">
+                        <button class="btnRegresar" id="btnRegresar">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode"
+                                viewBox="0 1 12 16" width="25" height="25">
+                                <path
+                                    d="M7.065,7.727l-2.78,2.78L24,10.532l0,3L4.3,13.507l2.765,2.764-2.121,2.12L1.025,14.474a3.5,3.5,0,0,1,0-4.949L4.944,5.607Z" />
+                            </svg>
+                        </button>
+                        <p> Admisiones</p>
+                    </div>
+                    <a href="#" class="linkSubMen">
+                        <p>Ver admisiones>></p>
+                    </a>
+                </div>
+                <div class="opcAdmis">
+                    <ul class="listSubMenu">
+                        <span role="button" class="btnDesign">
+                            <p class="pSubM">Becas</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Equivalencias</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Pedir informes</p>
+                        </span>
+                    </ul>
+                </div>
+            </div>
+            <!-- Abajo esta la seccion para oferta educativa -->
+            <!-- Antes que se te olvide como hacer la funcionalidad y que no hagas el cambio,
+            lo primero seria editar y que quede bien el diseño del nuevo subMenu de oferta
+            despues hacer que el contenedor no aparezca y agregar el .active aunque no funcione
+            esto para agregarlo despues a la funcionalidad-->
+            <div class="adminSub secOfert" id="ofertSubM">
+                <div class="contInfoSubM">
+                    <div class="contTit">
+                        <button class="btnRegresar" id="btnRegresar1">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode"
+                                viewBox="0 1 12 16" width="25" height="25">
+                                <path
+                                    d="M7.065,7.727l-2.78,2.78L24,10.532l0,3L4.3,13.507l2.765,2.764-2.121,2.12L1.025,14.474a3.5,3.5,0,0,1,0-4.949L4.944,5.607Z" />
+                            </svg>
+                        </button>
+                        <p> Oferta Educativa</p>
+                    </div>
+                    <a href="#" class="linkSubMen">
+                        <p>Ver oferta educativa>></p>
+                    </a>
+                </div>
+                <div class="opcAdmis">
+                    <ul class="listSubMenu">
+                        <span role="button" class="btnDesign">
+                            <p class="pSubM">Bachillerato</p>
+                        </span>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Licenciaturas</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Licenciaturas con Doble Titulacion</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Maestrías</p>
+                                <span class="contSvgSub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                        <g id="_01_align_center" data-name="01 align center">
+                                            <path
+                                                d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                        </g>
+                                    </svg>
+                                </span>
+
+                            </div>
+                        </button>
+                        <span role="button" class="btnDesign">
+                            <p>Extensión Universitaria</p>
+                        </span>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>A tu Ritmo</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <span role="button" class="btnDesign">
+                            <p>Acredita el Bachillerato</p>
+                        </span>
+                    </ul>
+                </div>
+            </div>
+            <!-- Submenu de Nosotros  -->
+            <div class="adminSub secNoso" id="nosotrosSubM">
+                <div class="contInfoSubM">
+                    <div class="contTit">
+                        <button class="btnRegresar" id="btnRegresar2">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode"
+                                viewBox="0 1 12 16" width="25" height="25">
+                                <path
+                                    d="M7.065,7.727l-2.78,2.78L24,10.532l0,3L4.3,13.507l2.765,2.764-2.121,2.12L1.025,14.474a3.5,3.5,0,0,1,0-4.949L4.944,5.607Z" />
+                            </svg>
+                        </button>
+                        <p> Nosotros</p>
+                    </div>
+                    <a href="#" class="linkSubMen">
+                        <p>Ver Nosotros>></p>
+                    </a>
+                </div>
+                <div class="opcAdmis">
+                    <ul class="listSubMenu">
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Planteles</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Modelo educativo</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Internacionalización</p>
+                                <span class="contSvgSub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                        <g id="_01_align_center" data-name="01 align center">
+                                            <path
+                                                d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                        </g>
+                                    </svg>
+                                </span>
+
+                            </div>
+                        </button>
+                        <span role="button" class="btnDesign">
+                            <p class="pSubM">Vida Estudiantil</p>
+                        </span>
+
+                        <span role="button" class="btnDesign">
+                            <p>Empleabilidad</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Claustro de Rockstars</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>RVOE</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Conexion educativa</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Reconociemientos</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Normatividad</p>
+                        </span>
+                    </ul>
+                </div>
+            </div>
+            <!-- SubMenu Comunidad UTC -->
+            <div class="adminSub secComu" id="comuniSubM">
+                <div class="contInfoSubM">
+                    <div class="contTit">
+                        <button class="btnRegresar" id="btnRegresar3">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode"
+                                viewBox="0 1 12 16" width="25" height="25">
+                                <path
+                                    d="M7.065,7.727l-2.78,2.78L24,10.532l0,3L4.3,13.507l2.765,2.764-2.121,2.12L1.025,14.474a3.5,3.5,0,0,1,0-4.949L4.944,5.607Z" />
+                            </svg>
+                        </button>
+                        <p> Comunidad UTC</p>
+                    </div>
+                    <a href="#" class="linkSubMen">
+                        <p>Ver Comunidad UTC>></p>
+                    </a>
+                </div>
+                <div class="opcAdmis">
+                    <ul class="listSubMenu">
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Blog</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <span role="button" class="btnDesign">
+                            <p class="pSubM">UTC en los medios</p>
+                        </span>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Aqui agregare los submenus, esto para que cuando se presione un boton del menu no se superponga con los otros 3 -->
+        <div class="subCabecera" id="subCabecera">
+            <nav class="subLink">
+                <div class="contSubHead">
+                    <ul class="linkHead">
+                        <!-- El siguiente contenedor se tiene que ocultar -->
+                        <div class="opcHead" id="opcHead">
+                            <li id="contLi">
+
+                                <!-- Boton de Admisiones -->
+                                <div class="admisHov">
+                                    <div>
+                                        <button class="btnOpcDesp" id="btnAdmisionesF">
+                                            Admisiones
+                                            <div class="flechaDer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15"
+                                                    height="10" id="svgFlechaDer" class="flecha">
+                                                    <g id="_01_align_center" data-name="01 align center">
+                                                        <path
+                                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                    <div class="contenDesk">
+                                        <div class="contentAdmis">
+                                            <div class="opcAdmisDesk">
+                                                <ul class="listOpcDesk">
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Becas
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Equivalencias
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Pedir informes
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="linkEsp">
+                                                            Ver admisiones >>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="anunAdmisDesk">
+                                                <div class="contHeadImgD">
+                                                    <!-- Primer imagen del subMenu -->
+                                                    <img src="imagenes/imgDesk.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg">
+                                                        <p class="contMasH1">
+                                                            Oferta a distancia
+
+                                                        </p>
+                                                        <p class="gato1">
+                                                            ver programas
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                    <!-- Segunda imagen del subMenu -->
+                                                    <img src="imagenes/porDos.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg1">
+                                                        <p class="contMasH2">
+                                                            Estudia dos carreras a la vez
+
+                                                        </p>
+                                                        <p class="gato2">
+                                                            Conoce mas >
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="contBajo">
+                                                    <div class="contBtnBajo">
+                                                        <div class="cont1Bajo">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                                                data-name="Layer 1" viewBox="0 0 24 24" width="20"
+                                                                height="15">
+                                                                <path
+                                                                    d="M12,5c-1.379,0-2.5-1.122-2.5-2.5s1.121-2.5,2.5-2.5,2.5,1.122,2.5,2.5-1.121,2.5-2.5,2.5Zm0-4c-.827,0-1.5,.673-1.5,1.5s.673,1.5,1.5,1.5,1.5-.673,1.5-1.5-.673-1.5-1.5-1.5Zm3,14h2v-6.5c0-1.378-1.121-2.5-2.5-2.5h-5c-1.379,0-2.5,1.122-2.5,2.5v6.5h2v6h1v-7h-2v-5.5c0-.827,.673-1.5,1.5-1.5h5c.827,0,1.5,.673,1.5,1.5v5.5h-2v7h1v-6Zm2,1.354v1.001c3.798,.575,6,1.738,6,2.645,0,1.253-4.185,3-11,3s-11-1.747-11-3c0-.907,2.202-2.07,6-2.645v-1.001c-3.885,.566-7,1.803-7,3.646,0,2.598,6.183,4,12,4s12-1.402,12-4c0-1.843-3.115-3.081-7-3.646Z" />
+                                                            </svg>
+                                                            <p>Ven conoce los planteles de UTC</p>
+                                                        </div>
+                                                        <div class="cont2Bajo">
+                                                            <a href="#">Agenda tu visita > </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li id="contLi">
+                                <!-- Boton de oferta educativa -->
+                                <div class="admisHov2">
+                                    <button class="btnOpcDesp" id="btnOfertaEdu">
+                                        Oferta educativa
+                                        <div class="flechaDer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="flecha" viewBox="0 0 24 24"
+                                                width="15" height="10" id="svgFlechaDer">
+                                                <g id="_01_align_center" data-name="01 align center">
+                                                    <path
+                                                        d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <div class="contenDesk2">
+                                        <div class="contentAdmis">
+                                            <div class="opcAdmisDesk">
+                                                <ul class="listOpcDesk">
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Licenciaturas
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Bachillerato
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Licenciaturas con Doble Titulacion
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Maestrias
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Extension Uniersitaria
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            A tu Ritmo
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Acredita el Bachillerato
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="linkEsp">
+                                                            Ver admisiones >>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="anunAdmisDesk">
+                                                <div class="contHeadImgD">
+                                                    <!-- Primer imagen del subMenu -->
+                                                    <img src="imagenes/imgDesk.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg">
+                                                        <p class="contMasH1">
+                                                            Oferta a distancia
+
+                                                        </p>
+                                                        <p class="gato1">
+                                                            ver programas
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                    <!-- Segunda imagen del subMenu -->
+                                                    <img src="imagenes/porDos.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg1">
+                                                        <p class="contMasH2">
+                                                            Estudia dos carreras a la vez
+
+                                                        </p>
+                                                        <p class="gato2">
+                                                            Conoce mas >
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="contBajo">
+                                                    <div class="contBtnBajo">
+                                                        <div class="cont1Bajo">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                                                data-name="Layer 1" viewBox="0 0 24 24" width="20"
+                                                                height="15">
+                                                                <path
+                                                                    d="M12,5c-1.379,0-2.5-1.122-2.5-2.5s1.121-2.5,2.5-2.5,2.5,1.122,2.5,2.5-1.121,2.5-2.5,2.5Zm0-4c-.827,0-1.5,.673-1.5,1.5s.673,1.5,1.5,1.5,1.5-.673,1.5-1.5-.673-1.5-1.5-1.5Zm3,14h2v-6.5c0-1.378-1.121-2.5-2.5-2.5h-5c-1.379,0-2.5,1.122-2.5,2.5v6.5h2v6h1v-7h-2v-5.5c0-.827,.673-1.5,1.5-1.5h5c.827,0,1.5,.673,1.5,1.5v5.5h-2v7h1v-6Zm2,1.354v1.001c3.798,.575,6,1.738,6,2.645,0,1.253-4.185,3-11,3s-11-1.747-11-3c0-.907,2.202-2.07,6-2.645v-1.001c-3.885,.566-7,1.803-7,3.646,0,2.598,6.183,4,12,4s12-1.402,12-4c0-1.843-3.115-3.081-7-3.646Z" />
+                                                            </svg>
+                                                            <p>Ven conoce los planteles de UTC</p>
+                                                        </div>
+                                                        <div class="cont2Bajo">
+                                                            <a href="#">Agenda tu visita > </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li id="contLi">
+                                <div class="admisHov3">
+                                    <button class="btnOpcDesp" id="btnNosotros">
+                                        Nosotros
+                                        <div class="flechaDer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="flecha" viewBox="0 0 24 24"
+                                                width="15" height="10" id="svgFlechaDer">
+                                                <g id="_01_align_center" data-name="01 align center">
+                                                    <path
+                                                        d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <div class="contenDesk3">
+                                        <div class="contentAdmis">
+                                            <div class="opcAdmisDesk">
+                                                <ul class="listOpcDesk">
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            planteles
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Modelo Educativo
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Internacionalización
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            vida estudiantil
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            empleabilidad
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Claustro de Rockstars
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            RVOE
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="linkEsp">
+                                                            Ver admisiones >>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="anunAdmisDesk">
+                                                <div class="contHeadImgD">
+                                                    <!-- Primer imagen del subMenu -->
+                                                    <img src="imagenes/imgDesk.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg">
+                                                        <p class="contMasH1">
+                                                            Oferta a distancia
+    
+                                                        </p>
+                                                        <p class="gato1">
+                                                            ver programas
+                                                        </p>
+    
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                    <!-- Segunda imagen del subMenu -->
+                                                    <img src="imagenes/porDos.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg1">
+                                                        <p class="contMasH2">
+                                                            Estudia dos carreras a la vez
+    
+                                                        </p>
+                                                        <p class="gato2">
+                                                            Conoce mas >
+                                                        </p>
+    
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="contBajo">
+                                                    <div class="contBtnBajo">
+                                                        <div class="cont1Bajo">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                                                data-name="Layer 1" viewBox="0 0 24 24" width="20"
+                                                                height="15">
+                                                                <path
+                                                                    d="M12,5c-1.379,0-2.5-1.122-2.5-2.5s1.121-2.5,2.5-2.5,2.5,1.122,2.5,2.5-1.121,2.5-2.5,2.5Zm0-4c-.827,0-1.5,.673-1.5,1.5s.673,1.5,1.5,1.5,1.5-.673,1.5-1.5-.673-1.5-1.5-1.5Zm3,14h2v-6.5c0-1.378-1.121-2.5-2.5-2.5h-5c-1.379,0-2.5,1.122-2.5,2.5v6.5h2v6h1v-7h-2v-5.5c0-.827,.673-1.5,1.5-1.5h5c.827,0,1.5,.673,1.5,1.5v5.5h-2v7h1v-6Zm2,1.354v1.001c3.798,.575,6,1.738,6,2.645,0,1.253-4.185,3-11,3s-11-1.747-11-3c0-.907,2.202-2.07,6-2.645v-1.001c-3.885,.566-7,1.803-7,3.646,0,2.598,6.183,4,12,4s12-1.402,12-4c0-1.843-3.115-3.081-7-3.646Z" />
+                                                            </svg>
+                                                            <p>Ven conoce los planteles de UTC</p>
+                                                        </div>
+                                                        <div class="cont2Bajo">
+                                                            <a href="#">Agenda tu visita > </a>
+                                                        </div>
+    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </li>
+                            <li id="contLi">
+                                <div class="admisHov4">
+                                    <button class="btnOpcDesp" id="btnComuni">
+                                    Comunidad UTC
+                                    <div class="flechaDer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="flecha" viewBox="0 0 24 24"
+                                            width="15" height="10" id="svgFlechaDer">
+                                            <g id="_01_align_center" data-name="01 align center">
+                                                <path
+                                                    d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </button>
+                                
+                                <div class="contenDesk4">
+                                    <div class="contentAdmis">
+                                        <div class="opcAdmisDesk">
+                                            <ul class="listOpcDesk">
+                                                <li class="opcDesk">
+                                                    <a href="#">
+                                                        Blog
+                                                    </a>
+                                                </li>
+                                                <li class="opcDesk">
+                                                    <a href="#">
+                                                        UTC en los medios
+                                                    </a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="#" class="linkEsp">
+                                                        Ver admisiones >>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="anunAdmisDesk">
+                                            <div class="contHeadImgD">
+                                                <!-- Primer imagen del subMenu -->
+                                                <img src="imagenes/imgDesk.jpg" alt="" class="imgHD">
+                                                <div class="contHeImg">
+                                                    <p class="contMasH1">
+                                                        Oferta a distancia
+                                                    </p>
+                                                    <p class="gato1">
+                                                        ver programas
+                                                    </p>
+                                                    <!-- <button>Conoce mas </button> -->
+                                                </div>
+                                                <!-- Segunda imagen del subMenu -->
+                                                <img src="imagenes/porDos.jpg" alt="" class="imgHD">
+                                                <div class="contHeImg1">
+                                                    <p class="contMasH2">
+                                                        Estudia dos carreras a la vez
+                                                    </p>
+                                                    <p class="gato2">
+                                                        Conoce mas >
+                                                    </p>
+                                                    <!-- <button>Conoce mas </button> -->
+                                                </div>
+                                            </div>
+                                            <div class="contBajo">
+                                                <div class="contBtnBajo">
+                                                    <div class="cont1Bajo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                                            data-name="Layer 1" viewBox="0 0 24 24" width="20"
+                                                            height="15">
+                                                            <path
+                                                                d="M12,5c-1.379,0-2.5-1.122-2.5-2.5s1.121-2.5,2.5-2.5,2.5,1.122,2.5,2.5-1.121,2.5-2.5,2.5Zm0-4c-.827,0-1.5,.673-1.5,1.5s.673,1.5,1.5,1.5,1.5-.673,1.5-1.5-.673-1.5-1.5-1.5Zm3,14h2v-6.5c0-1.378-1.121-2.5-2.5-2.5h-5c-1.379,0-2.5,1.122-2.5,2.5v6.5h2v6h1v-7h-2v-5.5c0-.827,.673-1.5,1.5-1.5h5c.827,0,1.5,.673,1.5,1.5v5.5h-2v7h1v-6Zm2,1.354v1.001c3.798,.575,6,1.738,6,2.645,0,1.253-4.185,3-11,3s-11-1.747-11-3c0-.907,2.202-2.07,6-2.645v-1.001c-3.885,.566-7,1.803-7,3.646,0,2.598,6.183,4,12,4s12-1.402,12-4c0-1.843-3.115-3.081-7-3.646Z" />
+                                                        </svg>
+                                                        <p>Ven conoce los planteles de UTC</p>
+                                                    </div>
+                                                    <div class="cont2Bajo">
+                                                        <a href="#">Agenda tu visita > </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                            </li>
+                            <li id="contLi">
+                                <div class="admisHov5">
+                                    <button class="btnOpcDesp" id="btnComuni">
+                                    Inteligencia Artificial
+                                    <div class="flechaDer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="flecha" viewBox="0 0 24 24"
+                                            width="15" height="10" id="svgFlechaDer">
+                                            <g id="_01_align_center" data-name="01 align center">
+                                                <path
+                                                    d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div class="contenDesk5">
+                                    <div class="contentAdmis">
+                                        <div class="opcAdmisDesk">
+                                            <ul class="listOpcDesk">
+                                                <li class="opcDesk">
+                                                    <a href="html/conceptBasi.html" target="_blank">
+                                                        Conceptos Basicos                                                    </a>
+                                                </li>
+                                                <li class="opcDesk">
+                                                    <a href="html/tecnicas.html">
+                                                        Tecnicas de aprendizaje
+                                                    </a>
+                                                </li>
+                                                <li class="opcDesk">
+                                                    <a href="/html/agenInt.html">
+                                                        Agente inteligente
+                                                    </a>
+                                                </li>
+                                                <li class="opcDesk">
+                                                    <a href="html/tiposIa.html">
+                                                        Tipos de IA
+                                                    </a>
+                                                </li>
+                                                <li class="opcDesk">
+                                                    <a href="html/busqueda.html">
+                                                        Tipos de Busqueda
+                                                    </a>
+                                                </li>
+                                                <li class="opcDesk">
+                                                    <a href="html/patrones.html">
+                                                        Reconocimiento de Patrones
+                                                    </a>
+                                                </li>
+                                                <li class="opcDesk">
+                                                    <a href="/html/clasificacion.html">
+                                                        Arboles de clasificación
+                                                    </a>
+                                                </li>
+                                                <li class="opcDesk">
+                                                    <a href="/html/aplicaciones.html">
+                                                        Aplicaciones
+                                                    </a>
+                                                </li>
+                                                <li class="opcDesk">
+                                                    <a href="/html/regresion_lineal.html">
+                                                        Regresion Lineal
+                                                    </a>
+                                                </li>
+                                                <li class="opcDesk">
+                                                    <a href="/html/">
+                                                        Random Forest
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="anunAdmisDesk">
+                                            <div class="contHeadImgD">
+                                                <!-- Primer imagen del subMenu -->
+                                                <img src="imagenes/imgDesk.jpg" alt="" class="imgHD">
+                                                <div class="contHeImg">
+                                                    <p class="contMasH1">
+                                                        Oferta a distancia
+
+                                                    </p>
+                                                    <p class="gato1">
+                                                        ver programas
+                                                    </p>
+
+                                                    <!-- <button>Conoce mas </button> -->
+                                                </div>
+                                                <!-- Segunda imagen del subMenu -->
+                                                <img src="imagenes/porDos.jpg" alt="" class="imgHD">
+                                                <div class="contHeImg1">
+                                                    <p class="contMasH2">
+                                                        Estudia dos carreras a la vez
+
+                                                    </p>
+                                                    <p class="gato2">
+                                                        Conoce mas >
+                                                    </p>
+
+                                                    <!-- <button>Conoce mas </button> -->
+                                                </div>
+                                            </div>
+                                            <div class="contBajo">
+                                                <div class="contBtnBajo">
+                                                    <div class="cont1Bajo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                                            data-name="Layer 1" viewBox="0 0 24 24" width="20"
+                                                            height="15">
+                                                            <path
+                                                                d="M12,5c-1.379,0-2.5-1.122-2.5-2.5s1.121-2.5,2.5-2.5,2.5,1.122,2.5,2.5-1.121,2.5-2.5,2.5Zm0-4c-.827,0-1.5,.673-1.5,1.5s.673,1.5,1.5,1.5,1.5-.673,1.5-1.5-.673-1.5-1.5-1.5Zm3,14h2v-6.5c0-1.378-1.121-2.5-2.5-2.5h-5c-1.379,0-2.5,1.122-2.5,2.5v6.5h2v6h1v-7h-2v-5.5c0-.827,.673-1.5,1.5-1.5h5c.827,0,1.5,.673,1.5,1.5v5.5h-2v7h1v-6Zm2,1.354v1.001c3.798,.575,6,1.738,6,2.645,0,1.253-4.185,3-11,3s-11-1.747-11-3c0-.907,2.202-2.07,6-2.645v-1.001c-3.885,.566-7,1.803-7,3.646,0,2.598,6.183,4,12,4s12-1.402,12-4c0-1.843-3.115-3.081-7-3.646Z" />
+                                                        </svg>
+                                                        <p>Ven conoce los planteles de UTC</p>
+                                                    </div>
+                                                    <div class="cont2Bajo">
+                                                        <a href="#">Agenda tu visita > </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                            </li>
+                        </div>
+                        <!-- Botones inferiores -->
+                        <div class="subHead2">
+                            <button class="btnInfo">
+                                Pedir información
+                            </button>
+                            <div class="alumEgre2">
+                                <ul id="listAlumn">
+                                    <li class="alumnLi">
+                                        <a href="https://utc.mx/alumnos">
+                                            <p class="titulo">
+                                                ALUMNOS
+                                            </p>
+                                            <span class="flechaDerSvg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24"
+                                                    width="25" height="15">
+                                                    <path
+                                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                                </svg>
+                                            </span>
+                                        </a>
+
+                                    </li>
+                                    <li class="alumnLi" id="egLi">
+                                        <a href="#">
+                                            <p class="titulo">
+                                                EGRESADOS
+                                            </p>
+                                            <span class="flechaDerSvg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24"
+                                                    width="25" height="15">
+                                                    <path
+                                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Cuerpo de la pagina web -->
+    <section class="carruselSec">
+        <div class="carrusel">
+            <!-- El div con el nombre de "contImagenesGenMob" solamente aparecera en 
+            dispositivos mobiles, en escritorios desaparecera -->
+            <div class="contImagenesGenMob">
+                <div class="carruselImg">
+                    <div class="imgPotencia">
+                        <img src="imagenes/POTTENCIAMobile.png" alt="Imagen de potencia solamente para mobiles"
+                            class="imgPotMobil">
+                    </div>
+                </div>
+                <div class="carruselImg">
+                    <div class="imgPotencia">
+                        <img src="imagenes/fondoBlancoConVerdeMobil.jpg" alt="" class="imgPotMobil">
+                    </div>
+                </div>
+                <div class="carruselImg">
+                    <div class="imgPotencia">
+                        <img src="imagenes/fondoAzulMobil.jpg" alt="" class="imgPotMobil">
+                    </div>
+                </div>
+                <div class="carruselImg">
+                    <div class="imgPotencia">
+                        <img src="imagenes/pasaporteMobil.jpg" alt="" class="imgPotMobil">
+                    </div>
+                    <div class="info">
+                        <h3>Tu esfuerzo tiene recompensas</h3>
+                        <button class="btnInfo"> Conoce Mas</button>
+                    </div>
+                </div>
+                <div class="carruselImg">
+                    <div class="imgPotencia">
+                        <img src="imagenes/saludMobil.png" alt="" class="imgPotMobil">
+                    </div>
+                    <div class="info">
+                        <h3>Formando futuros líderes de la salud</h3>
+                        <p>
+                            Conoce nuestros nuevos programas en ciencias de la salud
+                        </p>
+                        <button class="btnInfo"> Conoce Mas</button>
+                    </div>
+                </div>-
+            </div>
+            <div class="contImagenesGenDesk">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="imagenes/potenciaUTC.png" alt="Descripción de la imagen 1">
+                        <button class="conoce-mas">Conoce más</button>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="imagenes/fondoBlancoConVerdeUTC.jpg" alt="Descripción de la imagen 2">
+                        <button class="conoce-mas1">Conoce más</button>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="imagenes/fondoAzulUtc.png" alt="Descripción de la imagen 1">
+                        <button class="conoce-mas3">Conoce más</button>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="imagenes/PasaporteUTC.jpg" alt="Descripción de la imagen 2">
+                        <div class="conoce-mas5">
+                            <p class="espTem4">
+                                Tu esfuerzo tiene recompensas
+                            </p>
+                            <button>Conoce mas </button>
+                        </div>
+                        <!-- <button class="conoce-mas">Conoce más</button> -->
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="imagenes/futuroUTC.png" alt="Descripción de la imagen 2">
+                        <div class="conoce-mas4">
+                            <p class="gato">
+                                Formando futuros lideres de la salud.
+                            </p>
+                            <p class="espTem">
+                                Conoce nuestros programas en ciencias de la salud
+                            </p>
+                            <button>Conoce mas </button>
+                        </div>
+                        <!-- <button class="conoce-mas">Conoce más</button> -->
+                    </div>
+                    <button class="carousel-control prev-button">
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6l1.41-1.41z" />
+                        </svg>
+                    </button>
+                    <button class="carousel-control next-button">
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41L10 6l6 6-6 6-1.41-1.41z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Seccion de las diferentes opciones en UTC -->
+    <!-- Te falta agregar el diseño de las tarjetas  -->
+    <section class="secEstudio">
+        <div class="opcEst">
+            <div class="conCard">
+                <div class="cardGen ">
+                    <div class="estCard cardBa">
+                        <!-- Tarjeta del bachillerato-->
+                        <a href="https://utc.mx/oferta-educativa/bachillerato/bachillerato" class="linkEdu">
+                            <p class="titEst">
+                                Bachillerato
+                            </p>
+                            <p class="flecDerBn">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20"
+                                    class="viewLap" height="17">
+                                    <path
+                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                </svg>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="estCard cardLic">
+                        <!-- Tarjeta de licenciatura  -->
+                        <a href="https://utc.mx/oferta-educativa/licenciatura" class="linkEdu">
+                            <p class="titEst">
+                                Licenciatura
+                            </p>
+                            <p class="flecDerBn">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20"
+                                    height="17">
+                                    <path
+                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                </svg>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="estCard cardDob">
+                        <!-- Tarjeta del  -->
+                        <a href="https://utc.mx/oferta-educativa/licenciatura-doble-titulacion" class="linkEdu">
+                            <p class="titEst licD">
+                                Licenciatura con Doble Titulacion
+                            </p>
+                            <p class="flecDerBn">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20"
+                                    height="17">
+                                    <path
+                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                </svg>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="estCard cardMae">
+                        <!-- Tarjeta del  -->
+                        <a href="https://utc.mx/oferta-educativa/maestria" class="linkEdu">
+                            <p class="titEst">
+                                Maestria
+                            </p>
+                            <p class="flecDerBn">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20"
+                                    height="17">
+                                    <path
+                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                </svg>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="estCard cardExt">
+                        <!-- Tarjeta del  -->
+                        <a href="https://utc.mx/extension-universitaria" class="linkEdu">
+                            <p class="titEst">
+                                Extensión Universitaria
+                            </p>
+                            <p class="flecDerBn">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20"
+                                    height="17">
+                                    <path
+                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                </svg>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="estCard cardAcre">
+                        <!-- Tarjeta del  -->
+                        <a href="https://utc.mx/acreditaT" class="linkEdu">
+                            <p class="titEst">
+                                Acredita - T CENEVAL
+                            </p>
+                            <p class="flecDerBn">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20"
+                                    height="17">
+                                    <path
+                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                </svg>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="estCard cardRit">
+                        <!-- Tarjeta del  -->
+                        <a href="https://utc.mx/oferta-educativa/a-tu-ritmo" class="linkEdu">
+                            <p class="titEst">
+                                A tu ritmo
+                            </p>
+                            <p class="flecDerBn">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20"
+                                    height="17">
+                                    <path
+                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                </svg>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="estCard cardCom">
+                        <!-- Tarjeta del  -->
+                        <a href="https://utc.mx/curso-comipems" class="linkEdu">
+                            <p class="titEst">
+                                Curso Gratuito COMIPEMS
+                            </p>
+                            <p class="flecDerBn">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20"
+                                    height="17">
+                                    <path
+                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                </svg>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="carruselSec2">
+        <div class="contCarrusel1">
+            <div class="carruselContRedux">
+                <div class="navegacionCarru">
+                    <h2 class="subTemeCarru'">
+                        Acércate a nuestros planteles
+                    </h2>
+                    <div class="contGenDes">
+                        <div class="contDesplazado">
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/zona-rosa" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/zonaRosa.jpg" alt="Plantel Zona Rosa"
+                                                    class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                CIUDAD DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Zona Rosa
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/iztapalapa" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_iztapalapa.jpg"
+                                                    alt="Plantel Iztapalapa" class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                CIUDAD DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Iztapalapa
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/toreo" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_toreo.jpg" alt="Plantel Ejemplo 3"
+                                                    class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                CIUDAD DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Toreo
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/puebla" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_tlalpan.jpg"
+                                                    alt="Plantel Iztapalapa" class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                CIUDAD DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Tlalpan
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/puebla" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/PLANTEL_PUEBLA.jpg"
+                                                    alt="Plantel Iztapalapa" class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                PUEBLA
+                                            </p>
+                                            <h3 class="plantel">
+                                                PUEBLA
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/observatorio" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_observatorio.jpg"
+                                                    alt="Plantel Iztapalapa" class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                CIUDAD DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Observatorio (Próximamente)
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/atizapan" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_atizapan.jpg"
+                                                    alt="Plantel Iztapalapa" class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                ESTADO DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Atizapán
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/chalco" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_chalco.jpg" alt="Plantel Iztapalapa"
+                                                    class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                ESTADO DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Chalco
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/coacalco" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_coaca.jpg" alt="Plantel Iztapalapa"
+                                                    class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                ESTADO DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Coacalco
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href=" https://utc.mx/nosotros/planteles/cuautitlan" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_cuauti.jpg" alt="Plantel Iztapalapa"
+                                                    class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                ESTADO DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Cuautitlán
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/ecatepec" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_ecatepec.jpg"
+                                                    alt="Plantel Iztapalapa" class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                ESTADO DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Campus Ecatepec
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/huehuetoca" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_huehuetoca.jpg"
+                                                    alt="Plantel Iztapalapa" class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                ESTADO DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Huehuetoca (Proximamente)
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="html/ixtapaluca.html" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_ixtapaluca.jpg"
+                                                    alt="Plantel Iztapalapa" class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                ESTADO DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Ixtapaluca
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/los-reyes" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_reyes.jpg" alt="Plantel Iztapalapa"
+                                                    class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                ESTADO DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Los Reyes
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/tlalnepantla" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_tlalnepantla.jpg"
+                                                    alt="Plantel Iztapalapa" class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                ESTADO DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Tlalnepantla
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/neza" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_neza2.jpg" alt="Plantel Iztapalapa"
+                                                    class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                ESTADO DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Neza
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- Otro plantel -->
+                            <div class="contGenCardDesp">
+                                <div class="cardCarru">
+                                    <a href="https://utc.mx/nosotros/planteles/toluca" class="linkUbiP">
+                                        <div>
+                                            <div class="contImg">
+                                                <img src="imagenes planteles/campus_toluca.jpg" alt="Plantel Iztapalapa"
+                                                    class="imgPlante">
+                                            </div>
+                                        </div>
+                                        <div class="contInfoPlant">
+                                            <p class="ubicacion">
+                                                ESTADO DE MÉXICO
+                                            </p>
+                                            <h3 class="plantel">
+                                                Plantel Toluca
+                                            </h3>
+                                            <div class="conoce">
+                                                <span>Conócelo</span>
+                                                <span> &gt;
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dots-container">
+            <span class="dot active" onclick="scrollToSlide(0)"></span>
+            <span class="dot" onclick="scrollToSlide(1)"></span>
+            <span class="dot" onclick="scrollToSlide(2)"></span>
+            <span class="dot" onclick="scrollToSlide(3)"></span>
+            <span class="dot" onclick="scrollToSlide(4)"></span>
+            <span class="dot" onclick="scrollToSlide(5)"></span>
+            <span class="dot" onclick="scrollToSlide(6)"></span>
+            <span class="dot" onclick="scrollToSlide(7)"></span>
+            <span class="dot" onclick="scrollToSlide(8)"></span>
+            <span class="dot" onclick="scrollToSlide(9)"></span>
+            <span class="dot" onclick="scrollToSlide(10)"></span>
+            <span class="dot" onclick="scrollToSlide(11)"></span>
+            <span class="dot" onclick="scrollToSlide(12)"></span>
+            <span class="dot" onclick="scrollToSlide(13)"></span>
+            <span class="dot" onclick="scrollToSlide(14)"></span>
+            <span class="dot" onclick="scrollToSlide(15)"></span>
+            <span class="dot" onclick="scrollToSlide(16)"></span>
+        </div>
+    </section>
+    <!-- Seccion de la empleabilidad -->
+    <section class="secEmpleab">
+        <div class="contEmpleab">
+            <!-- En esta seccion se agregaran las diferentes imagenes para cuando se tenga
+            un tamaño de pantalla diferente, empezaremos por la de mobiles -->
+            <!-- Mobil -->
+            <div class="contInformes">
+                <div class="contImgInf">
+                    <div class="contImagenEm">
+                        <img src="imagenes/EmpleabilidadUTCMobil.png" alt="Empleabilidad" class="imgEmpleabili">
+                    </div>
+                    <div class="contInforEmp">
+                        <h3 class="titH3">
+                            Eleva tus oportunidades de empleabilidad
+                        </h3>
+                        <h3 class="subTH3">
+                            Una experiencia internacional eleva en un 42% la tasa de empleabilidad de un
+                            egresado.
+                        </h3>
+                    </div>
+                </div>
+                <div class="btnInformes">
+                    <button class="btnConInformes">Conoce Más</button>
+                </div>
+            </div>
+            <div class="conInformGrande">
+                <div class="infoGrand">
+                    <h3>Eleva tus oportunidades de empleabilidad</h3>
+                    <p>Una experiencia internacional eleva en un 42% la tasa de empleabilidad de un egresado</p>
+                    <button class="estiloBoton">Conoce más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Seccion de las tarjetas naranjas -->
+    <section class="secAlumnos">
+        <div class="sepaAlumn">
+            <div class="contAlumn">
+                <!-- Tarjeta -->
+                <div class="tarjetaAlumn">
+                    <div class="numAlumn">
+                        <p>+</p>
+                        <p>40,000</p>
+                    </div>
+                    <div class="infAlumn">
+                        <p class="temAlumnT">Alumnos del cambio</p>
+                        <p>Miles de estudiantes ya forman parte de la generacion del cambio</p>
+                    </div>
+                </div>
+                <!-- Tarjeta -->
+                <div class="tarjetaAlumn">
+                    <div class="numAlumn">
+                        <p>91</p>
+                        <p>%</p>
+                    </div>
+                    <div class="infAlumn">
+                        <p class="temAlumnT">Supera sus expectativas</p>
+                        <p>El 91% de nuestros alumnos califica su experiencia en UTC como excelente</p>
+                    </div>
+                </div>
+                <!-- Tarjeta -->
+                <div class="tarjetaAlumn">
+                    <div class="numAlumn">
+                        <p>+</p>
+                        <p>3,500</p>
+                    </div>
+                    <div class="infAlumn">
+                        <p class="temAlumnT">Empresas registradas</p>
+                        <p>Bolsa de empleo con miles de vacantes para jóvenes como tú.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta -->
+                <div class="tarjetaAlumn">
+                    <div class="numAlumn">
+                        <p>#</p>
+                        <p>41</p>
+                    </div>
+                    <div class="infAlumn">
+                        <p class="temAlumnT">Excelencia academica</p>
+                        <p>Estamos entre las 50 mejores universidades del país.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Seccion del titulo Comunidad UTC -->
+    <section class="tituloUCT">
+        <div class="margInt">
+            <div>
+                <h1>Comunidad UTC</h1>
+            </div>
+        </div>
+    </section>
+    <!-- Seccion de las tarjetas de la comunidad -->
+    <section class="secComTarj">
+        <div class="margenInt">
+            <div>
+                <div class="gapp">
+                    <!-- Espacio de las tarjetas-->
+                    <div>
+                        <div class="genTarjet">
+                            <a href="https://utc.mx/blog/tenemos-una-nueva-maestria-para-ti-derecho-laboral"
+                                class="linkUbiP">
+                                <div class="imagCard">
+                                    <img src="imagenes/juzgado.png" alt="" class="imgCardCom">
+                                </div>
+                                <div class="ContCard">
+                                    <p></p>
+                                    <h3>
+                                        Tenemos una nueva maestria para ti: Derecho Laboral
+                                    </h3>
+                                    <div class="InfoContCard">
+                                        <p>
+                                            En UTC nos preocupamos por brindarte siempre la mejor experiencia educativa
+                                            y
+                                            que puedas desarrollar tu talento al máximo nivel posible, además de que te
+                                            permitan encontrar un mejor puesto laboral para potenciar tu carrera.
+                                        </p>
+                                    </div>
+                                    <div class="VerMas">
+                                        <div class="contFlecha">
+                                            <span>Ver más ></span>
+                                            <!-- <span>chevron_right</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="direccion">
+                        <div class="genTarjet">
+                            <a href="http://utc.mx/blog/utc-obtiene-el-distintivo-esr" class="linkUbiP">
+                                <div class="imagCard">
+                                    <img src="imagenes/esr.jpg" alt="" class="imgCardCom">
+                                </div>
+                                <div class="ContCard">
+                                    <p style="font-weight: 100; font-size: 12px;">2025/04/14</p>
+                                    <h3>
+                                        UTC obtiene por cuarto año consecutivo el distintivo ESR
+                                    </h3>
+                                    <div class="InfoContCard">
+                                        <p>
+                                            Por cuarto año consecutivo la Universidad Tres Culturas ha sido
+                                            reconocida con el distintivo ESR. <br>
+                                            Descubre cómo UTC impulsa la resposabilidad social y como ser parte
+                                            del cambio.
+                                        </p>
+                                    </div>
+                                    <div class="VerMas">
+                                        <div class="contFlecha">
+                                            <span>Ver más ></span>
+                                            <!-- <span>chevron_right</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <div class="genTarjet">
+                            <a href="https://utc.mx/blog/utc-presente-en-el-inter-uane-mva-2025" class="linkUbiP">
+                                <div class="imagCard">
+                                    <img src="imagenes/club.jpg" alt="" class="imgCardCom">
+                                </div>
+                                <div class="ContCard">
+                                    <p style="font-weight: 100; font-size: 12px;">2025/03/26</p>
+                                    <h3>
+                                        UTC presente en el InterUANE MVA 2025
+                                    </h3>
+                                    <div class="InfoContCard">
+                                        <p>
+                                            El InterUANE 2025 fue más que una competencia para Titanes UTC.
+                                            Descubre cómo fue su experiencia o revive momentos increibles aqui.
+                                        </p>
+                                    </div>
+                                    <div class="VerMas">
+                                        <div class="contFlecha">
+                                            <span>Ver más ></span>
+                                            <!-- <span>chevron_right</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ubicacionImag">
+        <div class="margenInt">
+            <!-- Secciones para diferentes pantallas, por ejemplo div con diferentes imagenes para diferentes tamaños de pantalla -->
+            <div class="mobilUbi">
+                <div class="imgMob">
+                    <img src="imagenes/ubicacionesMobil.png" alt="">
+                </div>
+                <div class="btnCom">
+                    <button class="btnNeg">
+                        <span>Conoce más</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Seccion para las ubicaciones pero esta estara habilitada para lap pero no para mobiles -->
+            <div class="deskUbi">
+                <div class="btndesk">
+                    <button class="btnTrans">
+                        <span>Conoce más</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="formulario">
+        <div class="contFormulario">
+            <div class="conteFormu">
+                <section class="Form">
+                    <div>
+                        <!-- El formulario se divide en 3 partes o section -->
+                        <section class="cabForm">
+                            <div class="infCabForm">
+                                <div class="mobilForm">
+                                    <h4>
+                                        Obten más informacion
+                                    </h4>
+                                    <p>
+                                        "Queremos acompañarte en tu eleccion. Comparte tus datos
+                                        para que un asesor de admisiones pueda responder a todas tus preguntas."
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="otherInfo">
+                                <p>
+                                    "Al llenar tus datos aceptas nuestro "
+                                    <a href="#">Aviso de Privacidad</a>
+                                </p>
+                            </div>
+                            <form action="">
+                                <input type="text" name="nombre" placeholder="Nombre(s) *" required>
+                                <input type="text" name="apellidos" placeholder="Apellidos *" required>
+                                <input type="number" name="celular" placeholder="Celular *" required>
+                                <input type="email" name="correo" placeholder="Corre Electronico *" required>
+                            </form>
+                        </section>
+                        <section class="opcForm">
+                            <div class="modalidad">
+                                <p>Seleccione una modalidad</p>
+                                <div class="puntoGenDiseño">
+                                    <label for="">
+                                        <input type="radio">
+                                        <span>Presencial</span>
+                                    </label>
+                                    <label for="">
+                                        <input type="radio">
+                                        <span>A distancia</span>
+                                    </label>
+                                    <label for="">
+                                        <input type="radio">
+                                        <span>Ejecutiva</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modalidad">
+                                <p>Seleccione un nivel</p>
+                                <div class="puntoGenDiseño">
+                                    <label for="">
+                                        <input type="radio">
+                                        <span>Preparatoria</span>
+                                    </label>
+                                    <label for="">
+                                        <input type="radio">
+                                        <span>Licenciatura</span>
+                                    </label>
+                                    <label for="">
+                                        <input type="radio">
+                                        <span>Maestria</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="eleccion">
+                                <div>
+                                    <div class="eleccion">
+                                        <button>
+                                            <span>
+                                                Elige un programa
+                                            </span>
+                                            <div>
+                                                <span> </span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eleccion">
+                                <div>
+                                    <div class="eleccion">
+                                        <button>
+                                            <span>
+                                                Elige un plantel
+                                            </span>
+                                            <div>
+                                                <span></span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="enviarForm">
+                            <div class="contBtnEn">
+                                <button>
+                                    <span>Enviar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="videoInf">
+                    <h4>Vive la mejor etapa de tu vida en UTC</h4>
+                    <div class="contVideo">
+                        <div class="videoContainer">
+                            <iframe class="video" width="270" height="315"
+                                src="https://www.youtube.com/embed/_zE_QsobUyw?si=VKZrUce7xKZbC2ZI"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- Pie de pagina -->
+    <footer class="piePagina">
+        <div class="contenedorPie">
+            <div class="logoRedes">
+                <img src="imagenes/utcLogoBlue.png" class="logo1">
+                <div class="redesSociales">
+                    <!-- Icono facebook -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icono" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24"
+                        style="enable-background:new 0 0 24 24;" xml:space="preserve" width="512" height="512">
+                        <g>
+                            <path
+                                d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509   V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073   c0-6.627,5.373-12,12-12S24,5.445,24,12.073z" />
+                        </g>
+                    </svg>
+                    <!-- Icono instagram -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icono" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24"
+                        style="enable-background:new 0 0 24 24;" xml:space="preserve" width="512" height="512">
+                        <g>
+                            <path
+                                d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608   c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608   c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07   c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849   c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311   C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014   C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038   c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072   c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12   c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942   C15.668,0.014,15.259,0,12,0z" />
+                            <path
+                                d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162   C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z" />
+                            <circle cx="18.406" cy="5.594" r="1.44" />
+                        </g>
+                    </svg>
+                    <!-- Icono de tikTok -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icono" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24"
+                        style="enable-background:new 0 0 24 24;" xml:space="preserve" width="512" height="512">
+                        <path
+                            d="M22.465,9.866c-2.139,0-4.122-0.684-5.74-1.846v8.385c0,4.188-3.407,7.594-7.594,7.594c-1.618,0-3.119-0.51-4.352-1.376  c-1.958-1.375-3.242-3.649-3.242-6.218c0-4.188,3.407-7.595,7.595-7.595c0.348,0,0.688,0.029,1.023,0.074v0.977v3.235  c-0.324-0.101-0.666-0.16-1.023-0.16c-1.912,0-3.468,1.556-3.468,3.469c0,1.332,0.756,2.489,1.86,3.07  c0.481,0.253,1.028,0.398,1.609,0.398c1.868,0,3.392-1.486,3.462-3.338L12.598,0h4.126c0,0.358,0.035,0.707,0.097,1.047  c0.291,1.572,1.224,2.921,2.517,3.764c0.9,0.587,1.974,0.93,3.126,0.93V9.866z" />
+                    </svg>
+                    <!-- Icono youtube -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icono" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24"
+                        style="enable-background:new 0 0 24 24;" xml:space="preserve" width="512" height="512">
+                        <g id="XMLID_184_">
+                            <path
+                                d="M23.498,6.186c-0.276-1.039-1.089-1.858-2.122-2.136C19.505,3.546,12,3.546,12,3.546s-7.505,0-9.377,0.504   C1.591,4.328,0.778,5.146,0.502,6.186C0,8.07,0,12,0,12s0,3.93,0.502,5.814c0.276,1.039,1.089,1.858,2.122,2.136   C4.495,20.454,12,20.454,12,20.454s7.505,0,9.377-0.504c1.032-0.278,1.845-1.096,2.122-2.136C24,15.93,24,12,24,12   S24,8.07,23.498,6.186z M9.546,15.569V8.431L15.818,12L9.546,15.569z" />
+                        </g>
+                    </svg>
+                    <!-- <a href="#" target="_blank" class="icono"><img src="imagenes/facebook.png" alt="Facebook"></a>
+                    <a href="#" target="_blank" class="icono"><img src="imagenes/instagram.png" alt="Instagram"></a>
+                    <a href="#" target="_blank" class="icono"><img src="imagenes/tiktok.png" alt="TikTok"></a>
+                    <a href="#" target="_blank" class="icono"><img src="imagenes/youtube.png" alt="YouTube"></a> -->
+                </div>
+            </div>
+            <div class="menuInformacion">
+                <div class="seccionMenu">
+                    <h3>Estudiantes</h3>
+                    <ul>
+                        <li><a href="#">Espacio</a></li>
+                        <li><a href="#">Aula</a></li>
+                        <li><a href="#">Biblioteca virtual</a></li>
+                        <li><a href="#">Servicios Escolares</a></li>
+                        <li><a href="#">Alumnos</a></li>
+                        <li><a href="#">Servicio Social</a></li>
+                        <li><a href="#">Titulación</a></li>
+                    </ul>
+                </div>
+                <div class="seccionMenu">
+                    <h3>Admisiones</h3>
+                    <ul>
+                        <li><a href="#">Solicita informes</a></li>
+                        <li><a href="#">Becas</a></li>
+                        <li><a href="#">Equivalencias</a></li>
+                    </ul>
+                </div>
+                <div class="seccionMenu">
+                    <h3>Oferta educativa</h3>
+                    <ul>
+                        <li><a href="#">Bachillerato</a></li>
+                        <li><a href="#">Licenciaturas</a></li>
+                        <li><a href="#">Maestrías</a></li>
+                        <li><a href="#">A tu Ritmo</a></li>
+                        <li><a href="#">Extensión Universitaria</a></li>
+                        <li><a href="#">Acredita-T</a></li>
+                    </ul>
+                </div>
+                <div class="seccionMenu">
+                    <h3>Nosotros</h3>
+                    <ul>
+                        <li><a href="#">Internacionalización</a></li>
+                        <li><a href="#">Embajadores</a></li>
+                        <li><a href="#">Vida estudiantil</a></li>
+                        <li><a href="#">Planteles</a></li>
+                        <li><a href="#">Modelo educativo</a></li>
+                        <li><a href="#">Doble Titulación</a></li>
+                        <li><a href="#">RVOE</a></li>
+                        <li><a href="#">Empleabilidad</a></li>
+                        <li><a href="#">Conexión Educativa</a></li>
+                        <li><a href="#">Accesos para colaboradores</a></li>
+                    </ul>
+                </div>
+                <div class="seccionMenu">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="#">Línea segura</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Envíanos un mensaje</a></li>
+                    </ul>
+                </div>
+                <div class="seccionMenu">
+                    <h3>Comunidad UTC</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">UTC en los medios</a></li>
+                    </ul>
+                </div>
+                <div class="seccionMenu">
+                    <h3>Egresados</h3>
+                    <ul>
+                        <li><a href="#">Egresados talento</a></li>
+                    </ul>
+                </div>
+                <div class="seccionMenu">
+                    <h3>Docentes</h3>
+                    <ul>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contacto">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="iconoContacto">
+                    <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.492a3 3 0 00-2.144 0L1.5 8.67z" />
+                    <path
+                        d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.15l8.928 5.493a3 3 0 002.144 0L22.5 6.908z" />
+                </svg>
+                <span>8009531305</span>
+            </div>
+            <div class="certificaciones">
+                <h3>Certificaciones</h3>
+                <div class="logosCertificaciones">
+                    <img src="imagenes/pieExpansion.webp" alt="Super Empresas 2024 TOP" class="logoCertificacion">
+                    <img src="imagenes/pieUniver.webp" alt="MPS Universidades Ranking 2023" class="logoCertificacion">
+                </div>
+                <div class="logosCertificaciones">
+                    <img src="imagenes/esr.svg" alt="ESR Empresa Socialmente Responsable" class="logoCertificacion">
+                    <img src="imagenes/piePrivadas.webp" alt="Las Mejores Universidades Prevenidas"
+                        class="logoCertificacion">
+                </div>
+            </div>
+            <div class="avisoPrivacidad">
+                <a href="#">Aviso de privacidad</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2583 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    width: 100%;
+    /* font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    color: black;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 9999;
+    /* display:flex;
+    flex-direction: column; */
+}
+
+.contPrinci {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75em 1em;
+    border-bottom: 1px solid black;
+    z-index: 999;
+}
+
+.contLogo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    background-image: url(imagenes/utcLogoBlue.png);
+    background-size: cover;
+    background-position: 50%;
+    width: 39px;
+    height: 40px;
+}
+
+.opcMenu {
+    background-color: transparent;
+    border: none;
+}
+.linkHBlue:hover{
+    color:blue
+}
+
+/* Los siguientes bloques son para activar el menu desplegable 
+al presionar el boton hamburguesa */
+
+/* Descomenta el display para que se oculte, estoy haciendo pruebas por eso esta comentado */
+.subCabecera {
+    width: 100%;
+    top: 0;
+    position: relative;
+    display: none;
+}
+
+.subCabecera.active {
+    display: block;
+}
+
+
+.linkHead {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.opcHead {
+    padding: .5em .8em;
+}
+
+#contLi {
+    border-bottom: 1px solid black;
+}
+
+.btnOpcDesp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    margin: .9em 0
+}
+
+/* El siguiente contenedor solamente se activara en tamaños mas grander */
+.contOpciones {
+    display: none;
+}
+
+/* esta seccion esta abajo de los botones de */
+.subHead2 {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnInfo {
+    width: 100%;
+    padding: .75em 1em;
+    border-radius: .3em;
+    background-color: #272829;
+    color: #FFFF
+}
+
+.alumEgre2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 0;
+}
+
+#listAlumn {
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.alumnLi {
+    border: 2px solid black;
+    padding: 1em;
+    width: 50%;
+    border-radius: .5em;
+    display: flex;
+}
+
+.alumnLi a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black
+}
+
+.titulo {
+    width: 100%;
+    line-height: 125%;
+    display: flex;
+    font-size: 1.1em;
+    align-items: start;
+    margin: 0;
+}
+
+.flechaDerSvg {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+#egLi {
+    margin-left: .8em;
+}
+
+/* Los siguientes estilos son para el sub menu al presionar un boton del menu
+desplegable 
+para entender la funcion de desplegar el submenu primero se oculta el submenu y al presionar el boton 
+*/
+
+
+
+
+/* Los siguientes estilos son para el submenu desplegable al presionar un boton dentro 
+del menu desplegable */
+.subMenu {
+    width: 100%;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* El siguiente bloque de codigo contendra la seccion en donde se ocultaran los diferentes
+submenus de cada seccion, por ejemplo ahora solo tengo el de admision, oferta educativa */
+.secAdmis,
+.secOfert,
+.secNoso,
+.secComu {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.subMenu.active {
+    position: relative;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.secAdmis.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+.secOfert.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+.secNoso.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+.secComu.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+.opcHead.active {
+    display: none;
+}
+
+.contInfoSubM {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contTit {
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.contTit p {
+    margin-left: .8em;
+}
+
+.btnRegresar {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: .2em;
+    display: flex;
+    justify-content: center;
+}
+
+.linkSubMen {
+    padding: 0 1.5rem;
+    text-decoration: none;
+}
+
+.linkSubMen p {
+    margin-top: 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid black;
+}
+
+.listSubMenu {
+    color: #b8b8b8;
+    padding: 0;
+    margin: 0;
+    padding: 0 1.5rem;
+}
+
+.btnDesing p {
+    margin: 0
+}
+
+.pSubM {
+    margin: 0;
+}
+
+/* Botones que se encuentran dentro del submenu */
+.btnSubMenu {
+    display: flex;
+    width: 100%;
+    margin-top: 0.5em;
+    background-color: transparent;
+    border: none;
+    color: #b8b8b8;
+    font-size: 1em;
+    padding: 0
+}
+
+.contBtnSub {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #b8b8b8;
+}
+
+/* Cuerpo de la pagina */
+/* Carrusel de imagenes */
+.carruselSec {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrusel {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+}
+
+.contImagenesGenMob {
+    /* width: 100%; */
+    display: flex;
+}
+
+.carruselImg {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+.imgPotMobil {
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    padding: 1em;
+    text-align: center;
+}
+
+.carrusel-indicators-mob {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.indicator-mob {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.indicator-mob.active {
+    background-color: #eeee;
+    width: 35px;
+    height: 15px;
+}
+
+/* Para las tarjetas usare dos tipos de estilos uno general que sera la primera parte
+del class ubicado en cada car por general y el segundo que solamente se usara para 
+la tarjeta especifica para el background-image y su posicion */
+
+.secEstudio {
+    margin-top: 1.5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.opcEst {
+    width: 100%;
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    margin-left: 0 auto;
+
+}
+
+.conCard {
+    width: auto;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    gap: 15px;
+}
+
+.cardGen {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkEdu {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+}
+
+.titEst {
+    margin: 0;
+}
+
+.flecDerBn {
+    display: flex;
+    justify-content: end;
+}
+
+/* Este contenedor solamente es para el texto
+de la tercera tarjeta  */
+.licD {
+    font-size: .9em;
+}
+
+/* tarjetas y sus respectivos fondos  */
+.estCard {
+    display: flex;
+    height: 125px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.cardBa {
+    background-image: url(imagenesOpciones/bachillerato.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 130px;
+}
+
+.cardLic {
+    background-image: url(imagenesOpciones/licenciatura.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 130px;
+
+}
+
+.cardDob {
+    background-image: url(imagenesOpciones/imgPeq.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 130px;
+
+}
+
+.cardExt {
+    background-image: url(imagenesOpciones/extencion.jpg);
+    background-size: cover;
+    width: 130px;
+
+}
+
+.cardAcre {
+    background-image: url(imagenesOpciones/ceneval.jpg);
+    background-size: cover;
+    width: 130px;
+
+}
+
+.cardRit {
+    background-image: url(imagenesOpciones/ritmo.jpg);
+    background-size: cover;
+    width: 130px;
+
+}
+
+.cardCom {
+    background-image: url(imagenesOpciones/comipems.jpg);
+    background-size: cover;
+    width: 130px;
+
+}
+
+.cardMae {
+    background-image: url(imagenesOpciones/maestria.jpg);
+    background-size: cover;
+    width: 130px;
+
+}
+
+/* Seccion del carrusel 2 */
+
+.carruselSec2 {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f0f8ff;
+}
+
+.contCarrusel1 {
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carruselContRedux {
+    position: relative;
+}
+
+.navegacionCarru {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subTemeCarru {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.contGenDes {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.contDesplazado {
+    display: flex;
+}
+
+.contGenCardDesp {
+    flex: 0 0 auto;
+    width: 80%;
+    max-width: 400px;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    scroll-snap-align: start;
+}
+
+.contGenCardDesp:last-child {
+    margin-right: 0;
+}
+
+.cardCarru>div:first-child {
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.contImg {
+    width: 100%;
+    height: auto;
+}
+
+.imgPlante {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.contInfoPlant {
+    padding: 15px;
+    text-align: left;
+}
+
+.ubicacion {
+    color: #718096;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.plantel {
+    color: #2d3748;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.linkUbiP{
+    text-decoration: none;
+    color:none
+}
+.linkUbiP:active{
+    text-decoration: none;
+    color:none
+}
+
+.conoce {
+    display: flex;
+    align-items: center;
+    color: #1e3a8a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.conoce span:last-child {
+    margin-left: 5px;
+}
+
+.dots-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #0033ff;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    width: 25px;
+}
+
+/* Seccion para el diseño de la empleabilidad */
+
+.secEmpleab {
+    margin-top: 48px;
+}
+
+.contEmpleab {
+    padding: 0 1.5em;
+}
+
+/* .btnInformes{
+    width: 100%;
+} */
+.contImagenEm {
+    position: absolute;
+    z-index: -1;
+}
+
+.imgEmpleabili {
+    /* position:relative; */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+}
+
+.contInforEmp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    color: white;
+    margin-bottom: 110px;
+}
+
+.titH3 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+
+}
+
+.subTH3 {
+    margin-top: 0;
+    font-style: italic;
+    font-size: .8em;
+}
+
+.btnConInformes {
+    width: 90%;
+    margin-top: 1em;
+    height: 2.5em;
+    font-size: 1.2em;
+    border-radius: .4em;
+    color: white;
+    background-color: #272829;
+}
+
+/* Seccion de las 4 tarjetas con alumnos y expectativas */
+.secAlumnos {
+    margin-top: 40px
+}
+
+.sepaAlumn {
+    padding: 0 1.5em;
+}
+
+.contAlumn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.tarjetaAlumn {
+    box-shadow: 5px 5px 0px 0px #FF5722;
+    border: .5px solid rgb(189, 189, 189);
+    border-radius: .6em;
+    padding: 8px;
+}
+
+.numAlumn {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+.numAlumn p {
+    margin: 0
+}
+
+.infAlumn {
+    padding: 8px;
+}
+
+.temAlumnT {
+    font-weight: 800;
+}
+
+.infAlumn p {
+    margin: 0;
+}
+
+/* Seccion del titulo Comunidad UTC */
+.tituloUCT {
+    margin-top: 48px;
+}
+
+.margInt {
+    padding: 0 24px;
+}
+
+/* Seccion de las tarjetas de la comunidad UTC */
+
+.secComTarj {
+    margin-top: 48px;
+}
+
+.margenInt {
+    padding: 0 24px;
+}
+
+.gapp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12pxw;
+}
+
+.genTarjet {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    /* Adjust width as needed */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 10px;
+    /* Adjust margin as needed */
+}
+
+.imagCard {
+    width: 100%;
+    height: auto;
+}
+
+.imgCardCom {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Ensure the image covers the area without distortion */
+}
+
+.ContCard {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ContCard h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.InfoContCard p {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #555;
+}
+
+.VerMas {
+    margin-top: auto;
+    /* Push to the bottom */
+}
+
+.contFlecha {
+    display: flex;
+    align-items: center;
+    color: #007bff;
+    /* Example link color */
+    font-weight: bold;
+    font-size: 0.95em;
+    cursor: pointer;
+}
+
+.contFlecha span:first-child {
+    margin-right: 5px;
+}
+
+/* IMgen con ubicaciones */
+
+.ubicacionImag {
+    margin-top: 40px;
+}
+
+.mobilUbi {
+    width: 100%;
+}
+
+.btnCom {
+    width: 100%;
+}
+
+.imgMob img {
+    width: 100%;
+}
+
+.btnNeg {
+    width: 100%;
+    height: 3em;
+    border-radius: .3em;
+    color: white;
+    background-color: #272829;
+}
+
+/* Seccion del formulario y del video */
+.formulario {
+    margin-top: 40px;
+}
+
+.contFormulario {
+    padding: 0 24px
+}
+
+/* .Form{
+    padding:0 24px
+} */
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* background-color: #f7f7f7; Optional background for the whole section */
+}
+
+.contFormulario {
+    background-color: #fff;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    width: 350px;
+    /* Adjust width as needed */
+}
+
+.conteFormu {
+    padding: 20px;
+}
+
+.cabForm .infCabForm .mobilForm h4 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.cabForm .infCabForm .mobilForm p {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.cabForm .otherInfo p {
+    color: #555;
+    font-size: 0.85em;
+    margin-bottom: 20px;
+}
+
+.cabForm .otherInfo a {
+    color: black;
+    /* text-decoration: none; */
+}
+
+.cabForm .otherInfo a:hover {
+    text-decoration: underline;
+}
+
+.cabForm form input[type="text"],
+.cabForm form input[type="number"],
+.cabForm form input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.cabForm form input::placeholder {
+    color: #999;
+}
+
+.opcForm .modalidad {
+    margin-bottom: 20px;
+}
+
+.opcForm .modalidad p {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.opcForm .modalidad .puntoGenDiseño label {
+    display: inline-block;
+    margin-right: 15px;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.opcForm .modalidad .puntoGenDiseño label input[type="radio"] {
+    margin-right: 5px;
+}
+
+.opcForm .eleccion {
+    margin-bottom: 15px;
+}
+
+.opcForm .eleccion button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #555;
+    font-size: 1em;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.opcForm .eleccion button span {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.opcForm .eleccion button div {
+    color: #999;
+}
+
+.enviarForm {
+    display: flex;
+    justify-content: start;
+}
+
+.enviarForm .contBtnEn button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.enviarForm .contBtnEn button:hover {
+    background-color: #333;
+    /* Darker shade on hover */
+}
+
+.contVideo,
+.cideoContainer {
+    width: 100%;
+    margin: 0;
+    padding: 0
+}
+
+/* Diseño del pie de pagina  */
+
+.piePagina {
+    background-color: #f9f9f9;
+    padding: 20px;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.contenedorPie {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.logoRedes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    /* Espacio entre logo/redes y el menú */
+}
+
+.logo1 {
+    max-width: 35px;
+    /* Adjust size as needed */
+    height: auto;
+}
+
+.redesSociales {
+    display: flex;
+    gap: 15px;
+}
+
+.icono {
+    display: inline-block;
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+}
+
+.icono img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.menuInformacion {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+    /* Espacio entre el menú y el contacto/certificaciones */
+}
+
+.seccionMenu {
+    flex-basis: calc(50% - 20px);
+    /* Dos columnas en pantallas pequeñas */
+    margin-bottom: 20px;
+}
+
+.seccionMenu h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #555;
+}
+
+.seccionMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.seccionMenu li {
+    margin-bottom: 8px;
+}
+
+.seccionMenu li a {
+    color: #777;
+    text-decoration: none;
+}
+
+.seccionMenu li a:hover {
+    color: #333;
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    /* Espacio antes de certificaciones */
+}
+
+.iconoContacto {
+    width: 20px;
+    /* Adjust size as needed */
+    height: 20px;
+    fill: #555;
+}
+
+.certificaciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Espacio antes del aviso de privacidad */
+}
+
+.certificaciones h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.logosCertificaciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logoCertificacion {
+    max-width: 80px;
+    /* Adjust size as needed */
+    height: auto;
+}
+
+.avisoPrivacidad a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.avisoPrivacidad a:hover {
+    text-decoration: underline;
+}
+
+.conInformGrande {
+    display: none;
+}
+
+.deskUbi {
+    display: none;
+}
+
+.contImagenesGenDesk {
+    display: none;
+}
+.contenDesk, .contenDesk2,.contenDesk3,.contenDesk4,.contenDesk5{
+    display:none;
+    position:absolute;
+    
+}
+
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width:480px) {}
+
+@media (min-width:768px) and (max-width: 1279px){
+    .contPrinci {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contLogo {
+        display: flex;
+        justify-content: start;
+    }
+
+    .opcMenu {
+        display: none;
+    }
+    #contLi{
+        display:flex;
+        margin: 0 10px;
+        /* border-bottom: 2px solid red; */
+    }
+    /* El hover del submenu */
+    .btnOpcDesp{
+        border-bottom: 2px solid white;
+    }
+    .opcHead > li {
+        position: relative; /* Necesario para posicionar el submenú absolutamente dentro del li */
+    }
+    #btnAdmisionesF:hover,#btnOfertaEdu:hover,#btnNosotros:hover,#btnComuni:hover {
+        border-bottom: 2px solid blue;
+        color:blue;
+    }
+    
+    .flecha{
+        display:none;
+    }
+    .subCabecera{
+        display: flex;
+    }
+
+    .contOpciones {
+        display: flex;
+        /* margin:0 10px; */
+    }
+
+    .linkOpc {
+        margin-right: 10px;
+    }
+
+    .alumEgre {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .alumEgre li a {
+        text-decoration: none;
+        color: black;
+        margin-right: 10px;
+    }
+
+    .inforHead {
+        background-color: black;
+        color: white;
+        width: 150px;
+        border-radius: .5em;
+    }
+    .inforHead:hover{
+        background-color: white;
+        color:black
+    }
+    /* Activar el subMenu con un hover */
+
+    .contenDesk{
+        display:none;
+    }
+
+    .conoce-mas {
+        position: absolute; 
+        top: 80%; 
+        left: 20%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    /* Segundo boton */
+    .conoce-mas1 {
+        position: absolute; 
+        top: 80%; 
+        left: 20%; 
+        transform: translate(-50%, -50%); 
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        height: 3.5em;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas3{
+        position: absolute; 
+        top: 50%; 
+        left: 20%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas4{
+        position: absolute; 
+        width: 30%;
+        top: 45%; 
+        left: 25%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas4 .gato{
+        font-size: 35px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .espTem{
+        margin:0 0 20px 0;
+        font-size: 19px;
+        font-weight: 500;
+    }
+    .conoce-mas4 button{
+        margin-top:10px;
+        width: 10em;
+        height: 3.5em;
+        color:white;
+        background-color: transparent;
+        border-radius: .4em;
+        border:1px solid white;
+    }
+    .conoce-mas5{
+        position: absolute; 
+        width: 30%;
+        top: 45%; 
+        left: 25%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas5 .gato{
+        font-size: 35px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .espTem4{
+        margin:0 0 20px 0;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .conoce-mas5 button{
+        margin-top:10px;
+        width: 10em;
+        height: 3.5em;
+        color:white;
+        background-color: transparent;
+        border-radius: .4em;
+        border:1px solid white;
+    }
+    
+    /* Carrusel */
+    .contImagenesGenMob {
+        display: none;
+    }
+
+    .carrusel {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        /* margin-top: 20px; */
+    }
+    
+    .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 130%;
+        height: 600px; /* Ajusta la altura según necesites */
+    }
+    
+    .carousel-wrapper {
+        display: flex;
+        width: calc(100% * 3); /* Ajusta según el número de slides */
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .carousel-slide {
+        width: 100%;
+        height: 70%;
+        position: relative; /* Establece el contexto de posicionamiento para los hijos absolutos */
+    }
+    
+    .carousel-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    
+    
+    .carousel-control {
+    position: absolute;
+    top: 35%; 
+    margin-left: 20px;
+    margin-right: 20px;
+    transform: translateY(-50%); /* Ajusta para centrarlo exactamente */
+    width: auto; /* Ajusta el ancho al contenido */
+    padding: 10px; /* Añade un poco de espacio alrededor del icono */
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: .4em;
+    border:none;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* Centra el icono horizontalmente */
+    align-items: center; /* Centra el icono verticalmente */
+    z-index: 20;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    }
+    
+    .carousel-control:hover {
+        opacity: 1;
+    }
+    
+    .prev-button {
+        left: 0;
+    }
+    
+    .next-button {
+        right: 0;
+    }
+    
+    
+    .carousel-control svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .contImagenesGenDesk {
+        width: 78%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* fin carrusel */
+
+    #contLi {
+        border: none;
+    }
+
+    .subCabecera {
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+
+    .subHead2 {
+        display: none;
+    }
+
+    .contSubHead {
+        width: 100%;
+    }
+
+    .opcHead {
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+        display: flex;
+        font-size: 1.2em;
+    }
+
+    .btnOpcDesp {
+        font-size: 16px;
+    }
+
+    /* Despues se hara el diseño para cuando se use el hover */
+
+
+    /* Primer carrusel */
+
+    /* Tarjetas abajo del primer carrusel */
+    .cardBa,
+    .cardLic,
+    .cardDob,
+    .cardMae,
+    .cardExt,
+    .cardAcre,
+    .cardRit,
+    .cardCom {
+        width: 250px;
+        height: 200px;
+    }
+
+    .opcEst {
+        padding: 0 60px;
+    }
+
+    /* Sedundo carrusel */
+    .carruselSec2 {
+        padding: 20px;
+        margin-top: 20px;
+        background-color: #f0f8ff;
+        z-index: -1;
+    }
+
+
+
+    .contCarrusel1 {
+        max-width: 1300px;
+        margin: 0 auto;
+        overflow: hidden;
+        z-index: -1;
+
+    }
+
+    .contInformes {
+        display: none
+    }
+
+    .conInformGrande {
+        display: flex;
+        /* margin: px; */
+        width: 100%;
+        background-image: url(imagenes/EmpleabilidadUTC.jpg);
+        background-size: cover;
+        height: 20em;
+
+    }
+
+    .infoGrand {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        justify-content: end;
+        padding: 0 20px 20px 26px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .infoGrand p {
+        margin-top: 0;
+        font-size: 16px;
+    }
+
+    .infoGrand button {
+        width: 30%;
+        background-color: transparent;
+        border: 1px solid #eee;
+        color: white;
+        height: 3em;
+        border-radius: .5em;
+    }
+
+    /* Tarjetas de alumnos */
+    .contAlumn {
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+    }
+
+    /* titulo */
+    .margInt {
+        /* margin:auto; */
+        padding-left: 175px;
+    }
+
+    .margInt div h1 {
+        font-size: 35px;
+    }
+
+    /* Otras 3 tarjetas  */
+    .gapp {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+    }
+
+    /* Seccion de las ubicaciones */
+    .mobilUbi {
+        display: none;
+    }
+
+    .deskUbi {
+        display: flex;
+        width: 100%;
+        background-image: url(imagenes/ubicacionesUTC.png);
+        height: 15em;
+        background-size: cover;
+    }
+
+    .btndesk {
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        align-items: end;
+        padding: 0 40px 30px
+    }
+
+    .btnTrans {
+        width: 11%;
+        height: 12%;
+        border-radius: .5em;
+        background-color: transparent;
+        color: white;
+        border: 2px solid #eee;
+    }
+
+    /* Formulario y video */
+    .conteFormu {
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        align-items:center;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    .contFormulario {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        background-color: white;
+        border: none;
+
+    }
+
+    .Form {
+        width: 99%;
+        display: flex;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: .5em;
+    }
+
+    .video {
+        width: 700px;
+        height: 400px;
+    }
+
+    /* Footer */
+    .menuInformacion {
+        display: flex;
+    }
+
+    .contacto {
+        border-top: 1px solid black;
+        /* border-bottom: 1px solid black; */
+        width: 100%;
+    }
+
+    .certificaciones {
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+
+    .logosCertificaciones {
+        display: flex;
+        width: 100%;
+        align-items: left;
+    }
+
+
+    /* Seccion para aparecer el contenido con hover */
+    .contenDesk, .contenDesk2,.contenDesk3,.contenDesk4,.contenDesk5{
+        display:none;
+        position:absolute;
+        
+    }
+    /* Estilos para abrir el submenu */
+    .admisHov:hover .contenDesk{
+        display:block;
+        position:absolute;
+        left: -35%;
+        width: 875px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov2:hover .contenDesk2{
+        display:block;
+        position:absolute;
+        left: -110%;
+        width: 875px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov3:hover .contenDesk3{
+        display:block;
+        position:absolute;
+        left: -390%;
+        width: 875px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov4:hover .contenDesk4{
+        display:block;
+        position:absolute;
+        left: -300%;
+        width: 875px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov5:hover .contenDesk5{
+        display:block;
+        position:absolute;
+        left: -358%;
+        width: 875px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .contentAdmis{
+        /* padding:10px; */
+        display:flex;
+        gap:50px;
+        align-items:center
+    }
+    .opcAdmisDesk{
+        border-right: 1px solid #dbdbdb;
+        width: 90%;
+    }
+    .listOpcDesk{
+        list-style-type: none;
+        padding:20px;
+    }
+    .opcAdmisDesk .opcDesk a{
+        color:#a5a5a5;
+        text-decoration: none;
+    }
+    .opcAdmisDesk .opcDesk {
+        padding:10px;
+        width: 90%;
+        height: 1em;
+        display:flex;
+        align-items: center;
+    }
+    .opcAdmisDesk .opcDesk:hover{
+        border: 1px solid black;
+        background-color: #fff;
+        border-radius: .4em;
+        
+    }
+    /* Esta opcion abre el submenu */
+    .opcAdmisDesk .opcDesk a:hover{
+        color:blue;
+    }
+
+    /* Edtilo del contenedor bajo de la subcabecera de Hover */
+    .contBajo{
+        padding:16px
+    }
+    .contBtnBajo{
+        display:flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .cont1Bajo, .cont2Bajo{
+        display:flex;
+        align-items: center;
+        gap:50px
+    }
+    .cont2Bajo a{
+        color: blue;
+        text-decoration: none;
+    }
+    .cont2Bajo a:hover{
+        text-decoration: underline;
+    }
+    .contentAdmis{
+        /* display:flex; */
+        /* width: 100%; */
+        background-color: white;
+    }
+    .imgHD{
+        width: 40%;
+        border-radius: .4em;
+    }
+
+    .contHeImg{
+        position: absolute; 
+        width: 30%;
+        top: 25%; 
+        left: 47%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 50px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .contHeImg .gato1{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0px;
+        color:white;
+        text-decoration: underline;
+    }
+    .contHeImg{
+        margin:0 0 10px 0;
+        font-size: 19px;
+        font-weight: 500;
+        /* color:blue */
+    }
+    .contHeImg1{
+        position: absolute; 
+        width: 30%;
+        top: 35%; 
+        left: 73%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 50px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .contHeImg .gato2{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0px;
+        color:white;
+        /* text-decoration: underline; */
+        text-decoration:underline;
+    }
+    .contHeImg1{
+        margin:0 0 10px 0;
+        font-size: 19px;
+        font-weight: 500;
+        /* color:blue */
+    }
+
+}
+
+@media (min-width: 1280px) and (max-width: 2040px) {
+    .contPrinci {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 120px;
+        padding-right: 20px;
+    }
+
+    .contLogo {
+        display: flex;
+        justify-content: start;
+    }
+
+    .opcMenu {
+        display: none;
+    }
+    #contLi{
+        display:flex;
+        margin: 0 40px;
+        /* border-bottom: 2px solid red; */
+    }
+    /* El hover del submenu */
+    .btnOpcDesp{
+        border-bottom: 2px solid white;
+    }
+    .opcHead > li {
+        position: relative; /* Necesario para posicionar el submenú absolutamente dentro del li */
+    }
+    #btnAdmisionesF:hover,#btnOfertaEdu:hover,#btnNosotros:hover,#btnComuni:hover {
+        border-bottom: 2px solid blue;
+        color:blue;
+        /* width: 100%; */
+    }
+    /* Seccion para aparecer el contenido con hover */
+    .contenDesk, .contenDesk2,.contenDesk3,.contenDesk4,.contenDesk5{
+        display:none;
+        position:absolute;
+        
+    }
+    /* Estilos para abrir el submenu */
+    .admisHov:hover .contenDesk{
+        display:block;
+        position:absolute;
+        left: -148%;
+        width: 1480px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov2:hover .contenDesk2{
+        display:block;
+        position:absolute;
+        left: -243%;
+        width: 1480px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov3:hover .contenDesk3{
+        display:block;
+        position:absolute;
+        left: -690%;
+        width: 1480px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov4:hover .contenDesk4{
+        display:block;
+        position:absolute;
+        left: -520%;
+        width: 1480px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov5:hover .contenDesk5{
+        display:block;
+        position:absolute;
+        left: -590%;
+        width: 1480px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .contentAdmis{
+        /* padding:10px; */
+        display:flex;
+        gap:50px;
+        align-items:center
+    }
+    .opcAdmisDesk{
+        border-right: 1px solid #dbdbdb;
+        width: 90%;
+    }
+    .listOpcDesk{
+        list-style-type: none;
+        padding:20px;
+    }
+    .opcAdmisDesk .opcDesk a{
+        color:#a5a5a5;
+        text-decoration: none;
+    }
+    .opcAdmisDesk .opcDesk {
+        padding:10px;
+        width: 90%;
+        height: 1em;
+        display:flex;
+        align-items: center;
+    }
+    .opcAdmisDesk .opcDesk:hover{
+        border: 1px solid black;
+        background-color: #fff;
+        border-radius: .4em;
+        
+    }
+    /* Esta opcion abre el submenu */
+    .opcAdmisDesk .opcDesk a:hover{
+        color:blue;
+    }
+
+    /* Edtilo del contenedor bajo de la subcabecera de Hover */
+    .contBajo{
+        padding:16px
+    }
+    .contBtnBajo{
+        display:flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .cont1Bajo, .cont2Bajo{
+        display:flex;
+        align-items: center;
+        gap:50px
+    }
+    .cont2Bajo a{
+        color: blue;
+        text-decoration: none;
+    }
+    .cont2Bajo a:hover{
+        text-decoration: underline;
+    }
+/* Este sera ti limite */
+
+    .linkEsp {
+        padding:10px;
+        color:blue;
+        text-decoration: none;
+    }
+    .linkEsp:hover{
+        border: none;
+        text-decoration: underline;
+    }
+    
+
+    .btnOpcDesp {
+        font-size: 16px;
+    }
+    
+    .contentAdmis{
+        display:flex;
+        /* width: 100%; */
+        background-color: white;
+    }
+    .imgHD{
+        width: 35%;
+        border-radius: .4em;
+    }
+    .subLink{
+        position: relative;
+    }
+    .contSubHead {
+        position: relative;
+    }
+    .contHeadImgD{
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    .contHeImg{
+        position: absolute; 
+        width: 30%;
+        top: 35%; 
+        left: 47%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 50px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .contHeImg .gato1{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0px;
+        color:white;
+        text-decoration: underline;
+    }
+    .contHeImg{
+        margin:0 0 10px 0;
+        font-size: 19px;
+        font-weight: 500;
+        /* color:blue */
+    }
+    .contHeImg1{
+        position: absolute; 
+        width: 30%;
+        top: 35%; 
+        left: 73%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 50px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .contHeImg .gato2{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0px;
+        color:white;
+        /* text-decoration: underline; */
+        text-decoration:underline;
+    }
+    .contHeImg1{
+        margin:0 0 10px 0;
+        font-size: 19px;
+        font-weight: 500;
+        /* color:blue */
+    }
+
+    /* Fin subcabecera */
+    
+    .flecha{
+        display:none;
+    }
+    .subCabecera{
+        display: flex;
+    }
+
+    .contOpciones {
+        display: flex;
+        /* margin:0 10px; */
+    }
+
+    .linkOpc {
+        margin-right: 10px;
+    }
+
+    .alumEgre {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .alumEgre li a {
+        text-decoration: none;
+        color: black;
+        margin-right: 10px;
+    }
+
+    .inforHead {
+        background-color: black;
+        color: white;
+        width: 150px;
+        border-radius: .5em;
+    }
+    .inforHead:hover{
+        background-color: white;
+        color:black
+    }
+
+    /* Carrusel */
+    .contImagenesGenMob {
+        display: none;
+    }
+
+    .carrusel {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 120%;
+        height: 600px; /* Ajusta la altura según necesites */
+    }
+    
+    .carousel-wrapper {
+        display: flex;
+        width: calc(100% * 3); /* Ajusta según el número de slides */
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .carousel-slide {
+        width: 100%;
+        height: 100%;
+        position: relative; /* Establece el contexto de posicionamiento para los hijos absolutos */
+    }
+    
+    .carousel-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .conoce-mas {
+        position: absolute; 
+        top: 80%; 
+        left: 20%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    /* Segundo boton */
+    .conoce-mas1 {
+        position: absolute; 
+        top: 84%; 
+        left: 20%; 
+        transform: translate(-50%, -50%); 
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        height: 3.5em;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas3{
+        position: absolute; 
+        top: 50%; 
+        left: 20%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas4{
+        position: absolute; 
+        width: 30%;
+        top: 45%; 
+        left: 25%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas4 .gato{
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .espTem{
+        margin:0 0 20px 0;
+        font-size: 19px;
+        font-weight: 500;
+    }
+    .conoce-mas4 button{
+        margin-top:10px;
+        width: 10em;
+        height: 3.5em;
+        color:white;
+        background-color: transparent;
+        border-radius: .4em;
+        border:1px solid white;
+    }
+    .conoce-mas5{
+        position: absolute; 
+        width: 30%;
+        top: 45%; 
+        left: 25%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas5 .gato{
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .espTem4{
+        margin:0 0 20px 0;
+        font-size: 40px;
+        font-weight: 500;
+    }
+    .conoce-mas5 button{
+        margin-top:10px;
+        width: 10em;
+        height: 3.5em;
+        color:white;
+        background-color: transparent;
+        border-radius: .4em;
+        border:1px solid white;
+    }
+    
+    
+    .carousel-control {
+    position: absolute;
+    top: 50%; 
+    margin-left: 20px;
+    margin-right: 20px;
+    transform: translateY(-50%); /* Ajusta para centrarlo exactamente */
+    width: auto; /* Ajusta el ancho al contenido */
+    padding: 10px; /* Añade un poco de espacio alrededor del icono */
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: .4em;
+    border:none;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* Centra el icono horizontalmente */
+    align-items: center; /* Centra el icono verticalmente */
+    z-index: 20;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    }
+    
+    .carousel-control:hover {
+        opacity: 1;
+    }
+    
+    .prev-button {
+        left: 0;
+    }
+    
+    .next-button {
+        right: 0;
+    }
+    
+    
+    .carousel-control svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .contImagenesGenDesk {
+        width: 78%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* fin carrusel */
+
+    #contLi {
+        border: none;
+    }
+
+    .subCabecera {
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+
+    .subHead2 {
+        display: none;
+    }
+
+    .contSubHead {
+        width: 100%;
+    }
+
+    .opcHead {
+        display: flex;
+        justify-content: start;
+        /* align-items: ; */
+        width: 100%;
+        margin: 0;
+        padding: 0 100px;
+        display: flex;
+        font-size: 1.2em;
+    }
+    
+
+    /* Despues se hara el diseño para cuando se use el hover */
+
+
+    /* Primer carrusel */
+
+    /* Tarjetas abajo del primer carrusel */
+    .cardBa,
+    .cardLic,
+    .cardDob,
+    .cardMae,
+    .cardExt,
+    .cardAcre,
+    .cardRit,
+    .cardCom {
+        width: 250px;
+        height: 200px;
+    }
+
+    .opcEst {
+        padding: 0 60px;
+    }
+    /* Hover de */
+
+    /* Sedundo carrusel */
+    .carruselSec2 {
+        padding: 20px;
+        margin-top: 20px;
+        background-color: #f0f8ff;
+        z-index: -1;
+    }
+
+
+
+    .contCarrusel1 {
+        max-width: 1300px;
+        margin: 0 auto;
+        overflow: hidden;
+        z-index: -1;
+
+    }
+
+    .contInformes {
+        display: none
+    }
+
+    .conInformGrande {
+        display: flex;
+        /* margin: px; */
+        width: 100%;
+        background-image: url(imagenes/EmpleabilidadUTC.jpg);
+        background-size: cover;
+        height: 20em;
+
+    }
+
+    .infoGrand {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        justify-content: end;
+        padding: 0 20px 20px 26px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .infoGrand p {
+        margin-top: 0;
+        font-size: 16px;
+    }
+
+    .infoGrand button {
+        width: 30%;
+        background-color: transparent;
+        border: 1px solid #eee;
+        color: white;
+        height: 3em;
+        border-radius: .5em;
+    }
+
+    /* Tarjetas de alumnos */
+    .contAlumn {
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+    }
+
+    /* titulo */
+    .margInt {
+        /* margin:auto; */
+        padding-left: 175px;
+    }
+
+    .margInt div h1 {
+        font-size: 35px;
+    }
+
+    /* Otras 3 tarjetas  */
+    .gapp {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+    }
+
+    /* Seccion de las ubicaciones */
+    .mobilUbi {
+        display: none;
+    }
+
+    .deskUbi {
+        display: flex;
+        width: 100%;
+        background-image: url(imagenes/ubicacionesUTC.png);
+        height: 25em;
+        background-size: cover;
+    }
+
+    .btndesk {
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        align-items: end;
+        padding: 0 40px 30px
+    }
+
+    .btnTrans {
+        width: 11%;
+        height: 12%;
+        border-radius: .5em;
+        background-color: transparent;
+        color: white;
+        border: 2px solid #eee;
+    }
+
+    /* Formulario y video */
+    .conteFormu {
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        /* align-items:center; */
+        background-color: white;
+    }
+
+    .contFormulario {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        background-color: white;
+        border: none;
+
+    }
+
+    .Form {
+        width: 40%;
+        display: flex;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: .5em;
+    }
+
+    
+
+    .video {
+        width: 600px;
+        height: 400px;
+    }
+
+    /* Footer */
+    .menuInformacion {
+        display: flex;
+    }
+
+    .contacto {
+        border-top: 1px solid black;
+        /* border-bottom: 1px solid black; */
+        width: 100%;
+    }
+
+    .certificaciones {
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+
+    .logosCertificaciones {
+        display: flex;
+        width: 100%;
+        align-items: left;
+    }
+}

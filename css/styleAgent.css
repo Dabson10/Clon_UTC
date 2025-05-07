@@ -1,0 +1,1159 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    width: 100%;
+    font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    color: black;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 9999;
+    /* display:flex;
+    flex-direction: column; */
+}
+
+.contPrinci {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75em 1em;
+    border-bottom: 1px solid black;
+    z-index: 999;
+}
+
+.contLogo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    background-image: url(../imagenes/utcLogoBlue.png);
+    background-size: cover;
+    background-position: 50%;
+    width: 39px;
+    height: 40px;
+}
+
+.opcMenu {
+    background-color: transparent;
+    border: none;
+}
+.linkHBlue:hover{
+    color:blue
+}
+
+/* Los siguientes bloques son para activar el menu desplegable 
+al presionar el boton hamburguesa */
+
+/* Descomenta el display para que se oculte, estoy haciendo pruebas por eso esta comentado */
+.subCabecera {
+    width: 100%;
+    top: 0;
+    position: relative;
+    display: none;
+}
+
+.subCabecera.active {
+    display: block;
+}
+
+
+.linkHead {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.opcHead {
+    padding: .5em .8em;
+}
+
+#contLi {
+    border-bottom: 1px solid black;
+}
+
+.btnOpcDesp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    margin: .9em 0
+}
+
+/* El siguiente contenedor solamente se activara en tamaños mas grander */
+.contOpciones {
+    display: none;
+}
+
+/* esta seccion esta abajo de los botones de */
+.subHead2 {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnInfo {
+    width: 100%;
+    padding: .75em 1em;
+    border-radius: .3em;
+    background-color: #272829;
+    color: #FFFF
+}
+
+.alumEgre2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 0;
+}
+
+#listAlumn {
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.alumnLi {
+    border: 2px solid black;
+    padding: 1em;
+    width: 50%;
+    border-radius: .5em;
+    display: flex;
+}
+
+.alumnLi a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black
+}
+
+.titulo {
+    width: 100%;
+    line-height: 125%;
+    display: flex;
+    font-size: 1.1em;
+    align-items: start;
+    margin: 0;
+}
+
+.flechaDerSvg {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+#egLi {
+    margin-left: .8em;
+}
+
+/* Los siguientes estilos son para el sub menu al presionar un boton del menu
+desplegable 
+para entender la funcion de desplegar el submenu primero se oculta el submenu y al presionar el boton 
+*/
+
+
+
+
+/* Los siguientes estilos son para el submenu desplegable al presionar un boton dentro 
+del menu desplegable */
+.subMenu {
+    width: 100%;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* El siguiente bloque de codigo contendra la seccion en donde se ocultaran los diferentes
+submenus de cada seccion, por ejemplo ahora solo tengo el de admision, oferta educativa */
+.secAdmis,
+.secOfert,
+.secNoso,
+.secComu {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.subMenu.active {
+    position: relative;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.secAdmis.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+.secOfert.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+.secNoso.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+.secComu.active {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+.opcHead.active {
+    display: none;
+}
+
+.contInfoSubM {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contTit {
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.contTit p {
+    margin-left: .8em;
+}
+
+.btnRegresar {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: .2em;
+    display: flex;
+    justify-content: center;
+}
+
+.linkSubMen {
+    padding: 0 1.5rem;
+    text-decoration: none;
+}
+
+.linkSubMen p {
+    margin-top: 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid black;
+}
+
+.listSubMenu {
+    color: #b8b8b8;
+    padding: 0;
+    margin: 0;
+    padding: 0 1.5rem;
+}
+
+.btnDesing p {
+    margin: 0
+}
+
+.pSubM {
+    margin: 0;
+}
+
+/* Botones que se encuentran dentro del submenu */
+.btnSubMenu {
+    display: flex;
+    width: 100%;
+    margin-top: 0.5em;
+    background-color: transparent;
+    border: none;
+    color: #b8b8b8;
+    font-size: 1em;
+    padding: 0
+}
+
+.contBtnSub {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #b8b8b8;
+}
+
+    
+.punto2{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.tecAprendizaje{
+    max-width: 100%;
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+.subTec{
+    text-align: center;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.4em;
+}
+.temCont{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#concepTec{
+    width: 70%;
+    border:2px solid black;
+    margin: 1em 0;
+
+}
+#contenTec{
+    border-top: 2px solid black;
+}
+#conceptoTec{
+    display:flex;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+#cabTec {
+    display:flex;
+    justify-content: center;
+}
+
+.contenDesk, .contenDesk2,.contenDesk3,.contenDesk4,.contenDesk5{
+    display:none;
+    position:absolute;
+    
+}
+
+/* Media para tablet */
+
+@media (min-width:768px)  and (max-width: 1279px){
+    body{
+        font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    }
+    .contPrinci {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contLogo {
+        display: flex;
+        justify-content: start;
+    }
+
+    .opcMenu {
+        display: none;
+    }
+    #contLi{
+        display:flex;
+        margin: 0 10px;
+        /* border-bottom: 2px solid red; */
+    }
+    /* El hover del submenu */
+    .btnOpcDesp{
+        border-bottom: 2px solid white;
+    }
+    .opcHead > li {
+        position: relative; /* Necesario para posicionar el submenú absolutamente dentro del li */
+    }
+    #btnAdmisionesF:hover,#btnOfertaEdu:hover,#btnNosotros:hover,#btnComuni:hover {
+        border-bottom: 2px solid blue;
+        color:blue;
+    }
+    
+    .flecha{
+        display:none;
+    }
+    .subCabecera{
+        display: flex;
+    }
+
+    .contOpciones {
+        display: flex;
+        /* margin:0 10px; */
+    }
+
+    .linkOpc {
+        margin-right: 10px;
+    }
+
+    .alumEgre {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .alumEgre li a {
+        text-decoration: none;
+        color: black;
+        margin-right: 10px;
+    }
+
+    .inforHead {
+        background-color: black;
+        color: white;
+        width: 150px;
+        border-radius: .5em;
+    }
+    .inforHead:hover{
+        background-color: white;
+        color:black
+    }
+    /* Activar el subMenu con un hover */
+
+    .contenDesk{
+        display:none;
+    }
+
+    .conoce-mas {
+        position: absolute; 
+        top: 80%; 
+        left: 20%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    /* Segundo boton */
+    .conoce-mas1 {
+        position: absolute; 
+        top: 80%; 
+        left: 20%; 
+        transform: translate(-50%, -50%); 
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        height: 3.5em;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas3{
+        position: absolute; 
+        top: 50%; 
+        left: 20%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas4{
+        position: absolute; 
+        width: 30%;
+        top: 45%; 
+        left: 25%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas4 .gato{
+        font-size: 35px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .espTem{
+        margin:0 0 20px 0;
+        font-size: 19px;
+        font-weight: 500;
+    }
+    .conoce-mas4 button{
+        margin-top:10px;
+        width: 10em;
+        height: 3.5em;
+        color:white;
+        background-color: transparent;
+        border-radius: .4em;
+        border:1px solid white;
+    }
+    .conoce-mas5{
+        position: absolute; 
+        width: 30%;
+        top: 45%; 
+        left: 25%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .conoce-mas5 .gato{
+        font-size: 35px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .espTem4{
+        margin:0 0 20px 0;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .conoce-mas5 button{
+        margin-top:10px;
+        width: 10em;
+        height: 3.5em;
+        color:white;
+        background-color: transparent;
+        border-radius: .4em;
+        border:1px solid white;
+    }
+    #contLi {
+        border: none;
+    }
+
+    .subCabecera {
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+
+    .subHead2 {
+        display: none;
+    }
+
+    .contSubHead {
+        width: 100%;
+    }
+
+    .opcHead {
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+        display: flex;
+        font-size: 1.2em;
+    }
+
+    .btnOpcDesp {
+        font-size: 16px;
+    }
+    
+    /* Seccion para aparecer el contenido con hover */
+    .contenDesk, .contenDesk2,.contenDesk3,.contenDesk4,.contenDesk5{
+        display:none;
+        position:absolute;
+        
+    }
+    /* Estilos para abrir el submenu */
+    .admisHov:hover .contenDesk{
+        display:block;
+        position:absolute;
+        left: -35%;
+        width: 875px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov2:hover .contenDesk2{
+        display:block;
+        position:absolute;
+        left: -110%;
+        width: 875px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov3:hover .contenDesk3{
+        display:block;
+        position:absolute;
+        left: -390%;
+        width: 875px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov4:hover .contenDesk4{
+        display:block;
+        position:absolute;
+        left: -300%;
+        width: 875px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov5:hover .contenDesk5{
+        display:block;
+        position:absolute;
+        left: -358%;
+        width: 875px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .contentAdmis{
+        /* padding:10px; */
+        display:flex;
+        gap:50px;
+        align-items:center
+    }
+    .opcAdmisDesk{
+        border-right: 1px solid #dbdbdb;
+        width: 90%;
+    }
+    .listOpcDesk{
+        list-style-type: none;
+        padding:20px;
+    }
+    .opcAdmisDesk .opcDesk a{
+        color:#a5a5a5;
+        text-decoration: none;
+    }
+    .opcAdmisDesk .opcDesk {
+        padding:10px;
+        width: 90%;
+        height: 1em;
+        display:flex;
+        align-items: center;
+    }
+    .opcAdmisDesk .opcDesk:hover{
+        border: 1px solid black;
+        background-color: #fff;
+        border-radius: .4em;
+        
+    }
+    /* Esta opcion abre el submenu */
+    .opcAdmisDesk .opcDesk a:hover{
+        color:blue;
+    }
+
+    /* Edtilo del contenedor bajo de la subcabecera de Hover */
+    .contBajo{
+        padding:16px
+    }
+    .contBtnBajo{
+        display:flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .cont1Bajo, .cont2Bajo{
+        display:flex;
+        align-items: center;
+        gap:50px
+    }
+    .cont2Bajo a{
+        color: blue;
+        text-decoration: none;
+    }
+    .cont2Bajo a:hover{
+        text-decoration: underline;
+    }
+    .contentAdmis{
+        /* display:flex; */
+        /* width: 100%; */
+        background-color: white;
+    }
+    .imgHD{
+        width: 40%;
+        border-radius: .4em;
+    }
+
+    .contHeImg{
+        position: absolute; 
+        width: 30%;
+        top: 25%; 
+        left: 47%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 50px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .contHeImg .gato1{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0px;
+        color:white;
+        text-decoration: underline;
+    }
+    .contHeImg{
+        margin:0 0 10px 0;
+        font-size: 19px;
+        font-weight: 500;
+        /* color:blue */
+    }
+    .contHeImg1{
+        position: absolute; 
+        width: 30%;
+        top: 35%; 
+        left: 73%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 50px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .contHeImg .gato2{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0px;
+        color:white;
+        /* text-decoration: underline; */
+        text-decoration:underline;
+    }
+    .contHeImg1{
+        margin:0 0 10px 0;
+        font-size: 19px;
+        font-weight: 500;
+        /* color:blue */
+    }
+}
+
+
+@media (min-width: 1280px) and (max-width: 2040px){
+    .contPrinci {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 120px;
+        padding-right: 20px;
+    }
+
+    .contLogo {
+        display: flex;
+        justify-content: start;
+    }
+
+    .opcMenu {
+        display: none;
+    }
+    #contLi{
+        display:flex;
+        margin: 0 40px;
+        /* border-bottom: 2px solid red; */
+    }
+    /* El hover del submenu */
+    .btnOpcDesp{
+        border-bottom: 2px solid white;
+    }
+    .opcHead > li {
+        position: relative; /* Necesario para posicionar el submenú absolutamente dentro del li */
+    }
+    #btnAdmisionesF:hover,#btnOfertaEdu:hover,#btnNosotros:hover,#btnComuni:hover {
+        border-bottom: 2px solid blue;
+        color:blue;
+        /* width: 100%; */
+    }
+    /* Seccion para aparecer el contenido con hover */
+    .contenDesk, .contenDesk2,.contenDesk3,.contenDesk4,.contenDesk5{
+        display:none;
+        position:absolute;
+        
+    }
+    /* Estilos para abrir el submenu */
+    .admisHov:hover .contenDesk{
+        display:block;
+        position:absolute;
+        left: -148%;
+        width: 1480px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov2:hover .contenDesk2{
+        display:block;
+        position:absolute;
+        left: -243%;
+        width: 1480px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov3:hover .contenDesk3{
+        display:block;
+        position:absolute;
+        left: -690%;
+        width: 1480px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov4:hover .contenDesk4{
+        display:block;
+        position:absolute;
+        left: -520%;
+        width: 1480px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .admisHov5:hover .contenDesk5{
+        display:block;
+        position:absolute;
+        left: -590%;
+        width: 1480px;
+        z-index: 10;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        padding:20px
+    }
+    .contentAdmis{
+        /* padding:10px; */
+        display:flex;
+        gap:50px;
+        align-items:center
+    }
+    .opcAdmisDesk{
+        border-right: 1px solid #dbdbdb;
+        width: 90%;
+    }
+    .listOpcDesk{
+        list-style-type: none;
+        padding:20px;
+    }
+    .opcAdmisDesk .opcDesk a{
+        color:#a5a5a5;
+        text-decoration: none;
+    }
+    .opcAdmisDesk .opcDesk {
+        padding:10px;
+        width: 90%;
+        height: 1em;
+        display:flex;
+        align-items: center;
+    }
+    .opcAdmisDesk .opcDesk:hover{
+        border: 1px solid black;
+        background-color: #fff;
+        border-radius: .4em;
+        
+    }
+    /* Esta opcion abre el submenu */
+    .opcAdmisDesk .opcDesk a:hover{
+        color:blue;
+    }
+
+    /* Edtilo del contenedor bajo de la subcabecera de Hover */
+    .contBajo{
+        padding:16px
+    }
+    .contBtnBajo{
+        display:flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .cont1Bajo, .cont2Bajo{
+        display:flex;
+        align-items: center;
+        gap:50px
+    }
+    .cont2Bajo a{
+        color: blue;
+        text-decoration: none;
+    }
+    .cont2Bajo a:hover{
+        text-decoration: underline;
+    }
+/* Este sera ti limite */
+
+    .linkEsp {
+        padding:10px;
+        color:blue;
+        text-decoration: none;
+    }
+    .linkEsp:hover{
+        border: none;
+        text-decoration: underline;
+    }
+    
+
+    .btnOpcDesp {
+        font-size: 16px;
+    }
+    
+    .contentAdmis{
+        display:flex;
+        /* width: 100%; */
+        background-color: white;
+    }
+    .imgHD{
+        width: 35%;
+        border-radius: .4em;
+    }
+    .subLink{
+        position: relative;
+    }
+    .contSubHead {
+        position: relative;
+    }
+    .contHeadImgD{
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    .contHeImg{
+        position: absolute; 
+        width: 30%;
+        top: 35%; 
+        left: 47%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 50px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .contHeImg .gato1{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0px;
+        color:white;
+        text-decoration: underline;
+    }
+    .contHeImg{
+        margin:0 0 10px 0;
+        font-size: 19px;
+        font-weight: 500;
+        /* color:blue */
+    }
+    .contHeImg1{
+        position: absolute; 
+        width: 30%;
+        top: 35%; 
+        left: 73%; 
+        transform: translate(-50%, -50%); 
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 50px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        z-index: 10; 
+    }
+    .contHeImg .gato2{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0px;
+        color:white;
+        /* text-decoration: underline; */
+        text-decoration:underline;
+    }
+    .contHeImg1{
+        margin:0 0 10px 0;
+        font-size: 19px;
+        font-weight: 500;
+        /* color:blue */
+    }
+
+    /* Fin subcabecera */
+    
+    .flecha{
+        display:none;
+    }
+    .subCabecera{
+        display: flex;
+    }
+
+    .contOpciones {
+        display: flex;
+    }
+
+    .linkOpc {
+        margin-right: 10px;
+    }
+
+    .alumEgre {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .alumEgre li a {
+        text-decoration: none;
+        color: black;
+        margin-right: 10px;
+    }
+
+    .inforHead {
+        background-color: black;
+        color: white;
+        width: 150px;
+        border-radius: .5em;
+    }
+    .inforHead:hover{
+        background-color: white;
+        color:black
+    }
+    #contLi {
+        border: none;
+    }
+
+    .subCabecera {
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+
+    .subHead2 {
+        display: none;
+    }
+
+    .contSubHead {
+        width: 100%;
+    }
+
+    .opcHead {
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        margin: 0;
+        padding: 0 100px;
+        display: flex;
+        font-size: 1.2em;
+    }
+    
+.punto2{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.tecAprendizaje{
+    max-width: 100%;
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+.subTec{
+    text-align: center;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.4em;
+}
+.temCont{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#concepTec{
+    width: 70%;
+    /* border:2px solid black; */
+    margin: 1em 0;
+
+}
+#info{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+#cabTec{
+    width: 100%;
+    text-align: center;
+    /* border-bottom:2px solid black; */
+}
+#contenTec{
+    display:flex;
+    width: 100%;
+    font-weight: 400;
+}
+#conceptoTec{
+    /* border-right:1px solid black; */
+
+    padding:1.5em 1em;
+}
+#listaTec{
+    border-left:1px solid black;
+}
+#imgTec{
+    margin: 2em;
+    align-items: center;
+    width: 40%;
+}
+.punto2:target{
+    display:block;
+    opacity: 1;
+    visibility: visible;
+}
+/* Estilo del contenido 3 o Agente inteligente */
+.agenteInteligente{
+    display: flex; /* Oculta completamente el contenedor */
+    background-color: #ABC4AA;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Ajusta la altura según sea necesario */
+    transition: opacity 0.5s ease-in-out;
+}
+}

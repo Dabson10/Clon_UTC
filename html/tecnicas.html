@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/styleTec.css">
+    <link rel="icon" href="../imagenes/utcLogoBlue.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tecnicas de aprendizaje</title>
+</head>
+
+<body>
+    <header>
+        <!-- Este nav contendra en mobil dos cosas el boton de opciones y el 
+        logo y en desktop abra el logo y tres opciones a la derecha -->
+        <nav class="contPrinci">
+            <!-- Este boton tendra un svg en forma de hamburgesa y desplegara el menu -->
+            <button class="opcMenu" id=opcMenu>
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 30 25" width="18"
+                    height="15">
+                    <path
+                        d="M24,3.5c0,.83-.67,1.5-1.5,1.5H1.5c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5H22.5c.83,0,1.5,.67,1.5,1.5ZM6.5,20H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H6.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5ZM14.5,11H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H14.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Z" />
+                </svg>
+            </button>
+            <!-- Este div contendra otro div el cual mostrara el logo de la escuela y contendra 
+            los links que se mostraran en desktop -->
+            <div class="contLogo">
+                <div class="logo"></div>
+            </div>
+            <!-- El siguiente contenedor tendra tres opciones 2 links y un boton
+            este solo aparecera en pantallas grandes -->
+            <!-- El siguiente contenedor en mobiles desaparecera -->
+            <div class="contOpciones">
+                <div class="linkOpc">
+                    <ul class="alumEgre">
+                        <li class="linea">
+                            <a href="https://utc.mx/alumnos" class="linkHBlue"> ALUMNOS </a>
+                        </li>
+                        <li>
+                            <a href="#" class="linkHBlue"> EGRESADOS </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="inforHead">Pedir información</button>
+            </div>
+        </nav>
+        <!-- Para la subcabecera tambien tendremos que crear un div el cual contendra otro nav y este un div 
+        y dentro una lista desordenada la cual contendra dos cosas un div para elementos que apareceran normalmente
+        y otro div para los componentes que apareceran en mobil como pedir informacion, alumnos y egresados. -->
+        <!-- Menu -->
+        <div class="subMenu" id="subMenu">
+            <!-- Este submenu se abrira al presionar el boton del menu de admiciones, 
+            tendra dos class uno para el diseño general y otro especifico para la seccion-->
+            <div class="adminSub secAdmis" id="admisionSubM">
+                <div class="contInfoSubM">
+                    <div class="contTit">
+                        <button class="btnRegresar" id="btnRegresar">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode"
+                                viewBox="0 1 12 16" width="25" height="25">
+                                <path
+                                    d="M7.065,7.727l-2.78,2.78L24,10.532l0,3L4.3,13.507l2.765,2.764-2.121,2.12L1.025,14.474a3.5,3.5,0,0,1,0-4.949L4.944,5.607Z" />
+                            </svg>
+                        </button>
+                        <p> Admisiones</p>
+                    </div>
+                    <a href="#" class="linkSubMen">
+                        <p>Ver admisiones>></p>
+                    </a>
+                </div>
+                <div class="opcAdmis">
+                    <ul class="listSubMenu">
+                        <span role="button" class="btnDesign">
+                            <p class="pSubM">Becas</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Equivalencias</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Pedir informes</p>
+                        </span>
+                    </ul>
+                </div>
+            </div>
+            <!-- Abajo esta la seccion para oferta educativa -->
+            <!-- Antes que se te olvide como hacer la funcionalidad y que no hagas el cambio,
+            lo primero seria editar y que quede bien el diseño del nuevo subMenu de oferta
+            despues hacer que el contenedor no aparezca y agregar el .active aunque no funcione
+            esto para agregarlo despues a la funcionalidad-->
+            <div class="adminSub secOfert" id="ofertSubM">
+                <div class="contInfoSubM">
+                    <div class="contTit">
+                        <button class="btnRegresar" id="btnRegresar1">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode"
+                                viewBox="0 1 12 16" width="25" height="25">
+                                <path
+                                    d="M7.065,7.727l-2.78,2.78L24,10.532l0,3L4.3,13.507l2.765,2.764-2.121,2.12L1.025,14.474a3.5,3.5,0,0,1,0-4.949L4.944,5.607Z" />
+                            </svg>
+                        </button>
+                        <p> Oferta Educativa</p>
+                    </div>
+                    <a href="#" class="linkSubMen">
+                        <p>Ver oferta educativa>></p>
+                    </a>
+                </div>
+                <div class="opcAdmis">
+                    <ul class="listSubMenu">
+                        <span role="button" class="btnDesign">
+                            <p class="pSubM">Bachillerato</p>
+                        </span>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Licenciaturas</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Licenciaturas con Doble Titulacion</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Maestrías</p>
+                                <span class="contSvgSub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                        <g id="_01_align_center" data-name="01 align center">
+                                            <path
+                                                d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                        </g>
+                                    </svg>
+                                </span>
+
+                            </div>
+                        </button>
+                        <span role="button" class="btnDesign">
+                            <p>Extensión Universitaria</p>
+                        </span>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>A tu Ritmo</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <span role="button" class="btnDesign">
+                            <p>Acredita el Bachillerato</p>
+                        </span>
+                    </ul>
+                </div>
+            </div>
+            <!-- Submenu de Nosotros  -->
+            <div class="adminSub secNoso" id="nosotrosSubM">
+                <div class="contInfoSubM">
+                    <div class="contTit">
+                        <button class="btnRegresar" id="btnRegresar2">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode"
+                                viewBox="0 1 12 16" width="25" height="25">
+                                <path
+                                    d="M7.065,7.727l-2.78,2.78L24,10.532l0,3L4.3,13.507l2.765,2.764-2.121,2.12L1.025,14.474a3.5,3.5,0,0,1,0-4.949L4.944,5.607Z" />
+                            </svg>
+                        </button>
+                        <p> Nosotros</p>
+                    </div>
+                    <a href="#" class="linkSubMen">
+                        <p>Ver Nosotros>></p>
+                    </a>
+                </div>
+                <div class="opcAdmis">
+                    <ul class="listSubMenu">
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Planteles</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Modelo educativo</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Internacionalización</p>
+                                <span class="contSvgSub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                        <g id="_01_align_center" data-name="01 align center">
+                                            <path
+                                                d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                        </g>
+                                    </svg>
+                                </span>
+
+                            </div>
+                        </button>
+                        <span role="button" class="btnDesign">
+                            <p class="pSubM">Vida Estudiantil</p>
+                        </span>
+
+                        <span role="button" class="btnDesign">
+                            <p>Empleabilidad</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Claustro de Rockstars</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>RVOE</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Conexion educativa</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Reconociemientos</p>
+                        </span>
+                        <span role="button" class="btnDesign">
+                            <p>Normatividad</p>
+                        </span>
+                    </ul>
+                </div>
+            </div>
+            <!-- SubMenu Comunidad UTC -->
+            <div class="adminSub secComu" id="comuniSubM">
+                <div class="contInfoSubM">
+                    <div class="contTit">
+                        <button class="btnRegresar" id="btnRegresar3">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode"
+                                viewBox="0 1 12 16" width="25" height="25">
+                                <path
+                                    d="M7.065,7.727l-2.78,2.78L24,10.532l0,3L4.3,13.507l2.765,2.764-2.121,2.12L1.025,14.474a3.5,3.5,0,0,1,0-4.949L4.944,5.607Z" />
+                            </svg>
+                        </button>
+                        <p> Comunidad UTC</p>
+                    </div>
+                    <a href="#" class="linkSubMen">
+                        <p>Ver Comunidad UTC>></p>
+                    </a>
+                </div>
+                <div class="opcAdmis">
+                    <ul class="listSubMenu">
+                        <button class="btnSubMenu perro">
+                            <div class="contBtnSub">
+                                <p>Blog</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                    <g id="_01_align_center" data-name="01 align center">
+                                        <path
+                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                        <span role="button" class="btnDesign">
+                            <p class="pSubM">UTC en los medios</p>
+                        </span>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Aqui agregare los submenus, esto para que cuando se presione un boton del menu no se superponga con los otros 3 -->
+        <div class="subCabecera" id="subCabecera">
+            <nav class="subLink">
+                <div class="contSubHead">
+                    <ul class="linkHead">
+                        <!-- El siguiente contenedor se tiene que ocultar -->
+                        <div class="opcHead" id="opcHead">
+                            <li id="contLi">
+
+                                <!-- Boton de Admisiones -->
+                                <div class="admisHov">
+                                    <div>
+                                        <button class="btnOpcDesp" id="btnAdmisionesF">
+                                            Admisiones
+                                            <div class="flechaDer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15"
+                                                    height="10" id="svgFlechaDer" class="flecha">
+                                                    <g id="_01_align_center" data-name="01 align center">
+                                                        <path
+                                                            d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                    <div class="contenDesk">
+                                        <div class="contentAdmis">
+                                            <div class="opcAdmisDesk">
+                                                <ul class="listOpcDesk">
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Becas
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Equivalencias
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Pedir informes
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="linkEsp">
+                                                            Ver admisiones >>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="anunAdmisDesk">
+                                                <div class="contHeadImgD">
+                                                    <!-- Primer imagen del subMenu -->
+                                                    <img src="../imagenes/imgDesk.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg">
+                                                        <p class="contMasH1">
+                                                            Oferta a distancia
+
+                                                        </p>
+                                                        <p class="gato1">
+                                                            ver programas
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                    <!-- Segunda imagen del subMenu -->
+                                                    <img src="../imagenes/porDos.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg1">
+                                                        <p class="contMasH2">
+                                                            Estudia dos carreras a la vez
+
+                                                        </p>
+                                                        <p class="gato2">
+                                                            Conoce mas >
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="contBajo">
+                                                    <div class="contBtnBajo">
+                                                        <div class="cont1Bajo">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                                                data-name="Layer 1" viewBox="0 0 24 24" width="20"
+                                                                height="15">
+                                                                <path
+                                                                    d="M12,5c-1.379,0-2.5-1.122-2.5-2.5s1.121-2.5,2.5-2.5,2.5,1.122,2.5,2.5-1.121,2.5-2.5,2.5Zm0-4c-.827,0-1.5,.673-1.5,1.5s.673,1.5,1.5,1.5,1.5-.673,1.5-1.5-.673-1.5-1.5-1.5Zm3,14h2v-6.5c0-1.378-1.121-2.5-2.5-2.5h-5c-1.379,0-2.5,1.122-2.5,2.5v6.5h2v6h1v-7h-2v-5.5c0-.827,.673-1.5,1.5-1.5h5c.827,0,1.5,.673,1.5,1.5v5.5h-2v7h1v-6Zm2,1.354v1.001c3.798,.575,6,1.738,6,2.645,0,1.253-4.185,3-11,3s-11-1.747-11-3c0-.907,2.202-2.07,6-2.645v-1.001c-3.885,.566-7,1.803-7,3.646,0,2.598,6.183,4,12,4s12-1.402,12-4c0-1.843-3.115-3.081-7-3.646Z" />
+                                                            </svg>
+                                                            <p>Ven conoce los planteles de UTC</p>
+                                                        </div>
+                                                        <div class="cont2Bajo">
+                                                            <a href="#">Agenda tu visita > </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li id="contLi">
+                                <!-- Boton de oferta educativa -->
+                                <div class="admisHov2">
+                                    <button class="btnOpcDesp" id="btnOfertaEdu">
+                                        Oferta educativa
+                                        <div class="flechaDer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="flecha" viewBox="0 0 24 24"
+                                                width="15" height="10" id="svgFlechaDer">
+                                                <g id="_01_align_center" data-name="01 align center">
+                                                    <path
+                                                        d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <div class="contenDesk2">
+                                        <div class="contentAdmis">
+                                            <div class="opcAdmisDesk">
+                                                <ul class="listOpcDesk">
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Licenciaturas
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Bachillerato
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Licenciaturas con Doble Titulacion
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Maestrias
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Extension Uniersitaria
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            A tu Ritmo
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Acredita el Bachillerato
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="linkEsp">
+                                                            Ver admisiones >>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="anunAdmisDesk">
+                                                <div class="contHeadImgD">
+                                                    <!-- Primer imagen del subMenu -->
+                                                    <img src="../imagenes/imgDesk.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg">
+                                                        <p class="contMasH1">
+                                                            Oferta a distancia
+
+                                                        </p>
+                                                        <p class="gato1">
+                                                            ver programas
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                    <!-- Segunda imagen del subMenu -->
+                                                    <img src="../imagenes/porDos.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg1">
+                                                        <p class="contMasH2">
+                                                            Estudia dos carreras a la vez
+
+                                                        </p>
+                                                        <p class="gato2">
+                                                            Conoce mas >
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="contBajo">
+                                                    <div class="contBtnBajo">
+                                                        <div class="cont1Bajo">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                                                data-name="Layer 1" viewBox="0 0 24 24" width="20"
+                                                                height="15">
+                                                                <path
+                                                                    d="M12,5c-1.379,0-2.5-1.122-2.5-2.5s1.121-2.5,2.5-2.5,2.5,1.122,2.5,2.5-1.121,2.5-2.5,2.5Zm0-4c-.827,0-1.5,.673-1.5,1.5s.673,1.5,1.5,1.5,1.5-.673,1.5-1.5-.673-1.5-1.5-1.5Zm3,14h2v-6.5c0-1.378-1.121-2.5-2.5-2.5h-5c-1.379,0-2.5,1.122-2.5,2.5v6.5h2v6h1v-7h-2v-5.5c0-.827,.673-1.5,1.5-1.5h5c.827,0,1.5,.673,1.5,1.5v5.5h-2v7h1v-6Zm2,1.354v1.001c3.798,.575,6,1.738,6,2.645,0,1.253-4.185,3-11,3s-11-1.747-11-3c0-.907,2.202-2.07,6-2.645v-1.001c-3.885,.566-7,1.803-7,3.646,0,2.598,6.183,4,12,4s12-1.402,12-4c0-1.843-3.115-3.081-7-3.646Z" />
+                                                            </svg>
+                                                            <p>Ven conoce los planteles de UTC</p>
+                                                        </div>
+                                                        <div class="cont2Bajo">
+                                                            <a href="#">Agenda tu visita > </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li id="contLi">
+                                <div class="admisHov3">
+                                    <button class="btnOpcDesp" id="btnNosotros">
+                                        Nosotros
+                                        <div class="flechaDer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="flecha" viewBox="0 0 24 24"
+                                                width="15" height="10" id="svgFlechaDer">
+                                                <g id="_01_align_center" data-name="01 align center">
+                                                    <path
+                                                        d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <div class="contenDesk3">
+                                        <div class="contentAdmis">
+                                            <div class="opcAdmisDesk">
+                                                <ul class="listOpcDesk">
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            planteles
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Modelo Educativo
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Internacionalización
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            vida estudiantil
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            empleabilidad
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Claustro de Rockstars
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            RVOE
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="linkEsp">
+                                                            Ver admisiones >>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="anunAdmisDesk">
+                                                <div class="contHeadImgD">
+                                                    <!-- Primer imagen del subMenu -->
+                                                    <img src="../imagenes/imgDesk.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg">
+                                                        <p class="contMasH1">
+                                                            Oferta a distancia
+
+                                                        </p>
+                                                        <p class="gato1">
+                                                            ver programas
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                    <!-- Segunda imagen del subMenu -->
+                                                    <img src="../imagenes/porDos.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg1">
+                                                        <p class="contMasH2">
+                                                            Estudia dos carreras a la vez
+
+                                                        </p>
+                                                        <p class="gato2">
+                                                            Conoce mas >
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="contBajo">
+                                                    <div class="contBtnBajo">
+                                                        <div class="cont1Bajo">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                                                data-name="Layer 1" viewBox="0 0 24 24" width="20"
+                                                                height="15">
+                                                                <path
+                                                                    d="M12,5c-1.379,0-2.5-1.122-2.5-2.5s1.121-2.5,2.5-2.5,2.5,1.122,2.5,2.5-1.121,2.5-2.5,2.5Zm0-4c-.827,0-1.5,.673-1.5,1.5s.673,1.5,1.5,1.5,1.5-.673,1.5-1.5-.673-1.5-1.5-1.5Zm3,14h2v-6.5c0-1.378-1.121-2.5-2.5-2.5h-5c-1.379,0-2.5,1.122-2.5,2.5v6.5h2v6h1v-7h-2v-5.5c0-.827,.673-1.5,1.5-1.5h5c.827,0,1.5,.673,1.5,1.5v5.5h-2v7h1v-6Zm2,1.354v1.001c3.798,.575,6,1.738,6,2.645,0,1.253-4.185,3-11,3s-11-1.747-11-3c0-.907,2.202-2.07,6-2.645v-1.001c-3.885,.566-7,1.803-7,3.646,0,2.598,6.183,4,12,4s12-1.402,12-4c0-1.843-3.115-3.081-7-3.646Z" />
+                                                            </svg>
+                                                            <p>Ven conoce los planteles de UTC</p>
+                                                        </div>
+                                                        <div class="cont2Bajo">
+                                                            <a href="#">Agenda tu visita > </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li id="contLi">
+                                <div class="admisHov4">
+                                    <button class="btnOpcDesp" id="btnComuni">
+                                        Comunidad UTC
+                                        <div class="flechaDer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="flecha" viewBox="0 0 24 24"
+                                                width="15" height="10" id="svgFlechaDer">
+                                                <g id="_01_align_center" data-name="01 align center">
+                                                    <path
+                                                        d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </button>
+
+                                    <div class="contenDesk4">
+                                        <div class="contentAdmis">
+                                            <div class="opcAdmisDesk">
+                                                <ul class="listOpcDesk">
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            Blog
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="#">
+                                                            UTC en los medios
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" class="linkEsp">
+                                                            Ver admisiones >>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="anunAdmisDesk">
+                                                <div class="contHeadImgD">
+                                                    <!-- Primer imagen del subMenu -->
+                                                    <img src="../imagenes/imgDesk.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg">
+                                                        <p class="contMasH1">
+                                                            Oferta a distancia
+
+                                                        </p>
+                                                        <p class="gato1">
+                                                            ver programas
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                    <!-- Segunda imagen del subMenu -->
+                                                    <img src="../imagenes/porDos.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg1">
+                                                        <p class="contMasH2">
+                                                            Estudia dos carreras a la vez
+
+                                                        </p>
+                                                        <p class="gato2">
+                                                            Conoce mas >
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="contBajo">
+                                                    <div class="contBtnBajo">
+                                                        <div class="cont1Bajo">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                                                data-name="Layer 1" viewBox="0 0 24 24" width="20"
+                                                                height="15">
+                                                                <path
+                                                                    d="M12,5c-1.379,0-2.5-1.122-2.5-2.5s1.121-2.5,2.5-2.5,2.5,1.122,2.5,2.5-1.121,2.5-2.5,2.5Zm0-4c-.827,0-1.5,.673-1.5,1.5s.673,1.5,1.5,1.5,1.5-.673,1.5-1.5-.673-1.5-1.5-1.5Zm3,14h2v-6.5c0-1.378-1.121-2.5-2.5-2.5h-5c-1.379,0-2.5,1.122-2.5,2.5v6.5h2v6h1v-7h-2v-5.5c0-.827,.673-1.5,1.5-1.5h5c.827,0,1.5,.673,1.5,1.5v5.5h-2v7h1v-6Zm2,1.354v1.001c3.798,.575,6,1.738,6,2.645,0,1.253-4.185,3-11,3s-11-1.747-11-3c0-.907,2.202-2.07,6-2.645v-1.001c-3.885,.566-7,1.803-7,3.646,0,2.598,6.183,4,12,4s12-1.402,12-4c0-1.843-3.115-3.081-7-3.646Z" />
+                                                            </svg>
+                                                            <p>Ven conoce los planteles de UTC</p>
+                                                        </div>
+                                                        <div class="cont2Bajo">
+                                                            <a href="#">Agenda tu visita > </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li id="contLi">
+                                <div class="admisHov5">
+                                    <button class="btnOpcDesp" id="btnComuni">
+                                        Inteligencia Artificial
+                                        <div class="flechaDer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="flecha" viewBox="0 0 24 24"
+                                                width="15" height="10" id="svgFlechaDer">
+                                                <g id="_01_align_center" data-name="01 align center">
+                                                    <path
+                                                        d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <div class="contenDesk5">
+                                        <div class="contentAdmis">
+                                            <div class="opcAdmisDesk">
+                                                <ul class="listOpcDesk">
+                                                    <li class="opcDesk">
+                                                        <a href="html/conceptBasi.html" target="_blank">
+                                                            Conceptos Basicos </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="/html/tecnicas.html">
+                                                            Tecnicas de aprendizaje
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="/html/agenInt.html">
+                                                            Agente inteligente
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="/html/tiposIa.html">
+                                                            Tipos de IA
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="/html/busqueda.html">
+                                                            Tipos de Busqueda
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="/html/patrones.html">
+                                                            Reconocimiento de Patrones
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="/html/clasificacion.html">
+                                                            Arboles de clasificación
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="/html/aplicaciones.html">
+                                                            Aplicaciones
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="/html/regresion_lineal.html">
+                                                            Regresion Lineal
+                                                        </a>
+                                                    </li>
+                                                    <li class="opcDesk">
+                                                        <a href="/html/random_forest.html">
+                                                            Random Forest
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="anunAdmisDesk">
+                                                <div class="contHeadImgD">
+                                                    <!-- Primer imagen del subMenu -->
+                                                    <img src="../imagenes/imgDesk.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg">
+                                                        <p class="contMasH1">
+                                                            Oferta a distancia
+
+                                                        </p>
+                                                        <p class="gato1">
+                                                            ver programas
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                    <!-- Segunda imagen del subMenu -->
+                                                    <img src="../imagenes/porDos.jpg" alt="" class="imgHD">
+                                                    <div class="contHeImg1">
+                                                        <p class="contMasH2">
+                                                            Estudia dos carreras a la vez
+
+                                                        </p>
+                                                        <p class="gato2">
+                                                            Conoce mas >
+                                                        </p>
+
+                                                        <!-- <button>Conoce mas </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="contBajo">
+                                                    <div class="contBtnBajo">
+                                                        <div class="cont1Bajo">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                                                data-name="Layer 1" viewBox="0 0 24 24" width="20"
+                                                                height="15">
+                                                                <path
+                                                                    d="M12,5c-1.379,0-2.5-1.122-2.5-2.5s1.121-2.5,2.5-2.5,2.5,1.122,2.5,2.5-1.121,2.5-2.5,2.5Zm0-4c-.827,0-1.5,.673-1.5,1.5s.673,1.5,1.5,1.5,1.5-.673,1.5-1.5-.673-1.5-1.5-1.5Zm3,14h2v-6.5c0-1.378-1.121-2.5-2.5-2.5h-5c-1.379,0-2.5,1.122-2.5,2.5v6.5h2v6h1v-7h-2v-5.5c0-.827,.673-1.5,1.5-1.5h5c.827,0,1.5,.673,1.5,1.5v5.5h-2v7h1v-6Zm2,1.354v1.001c3.798,.575,6,1.738,6,2.645,0,1.253-4.185,3-11,3s-11-1.747-11-3c0-.907,2.202-2.07,6-2.645v-1.001c-3.885,.566-7,1.803-7,3.646,0,2.598,6.183,4,12,4s12-1.402,12-4c0-1.843-3.115-3.081-7-3.646Z" />
+                                                            </svg>
+                                                            <p>Ven conoce los planteles de UTC</p>
+                                                        </div>
+                                                        <div class="cont2Bajo">
+                                                            <a href="#">Agenda tu visita > </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </div>
+                        <!-- Botones inferiores -->
+                        <div class="subHead2">
+                            <button class="btnInfo">
+                                Pedir información
+                            </button>
+                            <div class="alumEgre2">
+                                <ul id="listAlumn">
+                                    <li class="alumnLi">
+                                        <a href="https://utc.mx/alumnos">
+                                            <p class="titulo">
+                                                ALUMNOS
+                                            </p>
+                                            <span class="flechaDerSvg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24"
+                                                    width="25" height="15">
+                                                    <path
+                                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                                </svg>
+                                            </span>
+                                        </a>
+
+                                    </li>
+                                    <li class="alumnLi" id="egLi">
+                                        <a href="#">
+                                            <p class="titulo">
+                                                EGRESADOS
+                                            </p>
+                                            <span class="flechaDerSvg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24"
+                                                    width="25" height="15">
+                                                    <path
+                                                        d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" />
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="tecAprendizaje" id="tecAprendizaje">
+        <article class="punto2" id="punto2">
+            <div class="temCont">
+                <div class="subTec">
+                    <p>Tecnicas de aprendizaje</p>
+                </div>
+                <div id="concepTec">
+                    <!-- Contenido general de los temas 1-->
+                    <div id="info">
+                        <div id="cabTec">
+                            <p>Aprendizaje supervisado</p>
+                        </div>
+
+                        <div id="contenTec">
+                            <div id="conceptoTec">
+                                El modelo aprende a partir de datos etiquetados, donde cada entrada tiene una salida
+                                esperada. Se usa para clasificación y regresión.
+                                <div id="imagenes">
+                                    <img src="imagenes/ia1.jpg" alt="" id="imgTec">
+                                </div>
+                            </div>
+                            <div id="listaTec">
+                                <ul>
+                                    <li>
+                                        Regresión Lineal y Logística: Modelos matemáticos para predicción.
+
+                                    </li>
+                                    <li>
+                                        Máquinas de Soporte Vectorial (SVM): Clasificadores eficientes para datos
+                                        complejos.
+                                    </li>
+                                    <li>
+                                        Redes Neuronales Artificiales (ANNs): Modelos inspirados en el cerebro humano.
+                                    </li>
+                                    <li>
+                                        Árboles de Decisión y Random Forest: Algoritmos basados en reglas para
+                                        clasificación.
+                                    </li>
+                                    <li>
+                                        K-Vecinos Más Cercanos (KNN): Clasifica datos según su cercanía a otros.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="concepTec">
+                    <!-- Contenido general de los temas 2-->
+                    <div id="info">
+                        <div id="cabTec">
+                            <p>Aprendizaje No Supervisado</p>
+                        </div>
+
+                        <div id="contenTec">
+                            <div id="conceptoTec">
+                                El modelo analiza datos sin etiquetar y encuentra patrones o estructuras por sí solo. Se usa para agrupamiento y reducción de dimensionalidad.
+                                <div id="imagenes">
+                                    <img src="imagenes/ia1.jpg" alt="" id="imgTec">
+                                </div>
+                            </div>
+                            <div id="listaTec">
+                                <ul>
+                                    <li>
+                                        K-Means: Agrupa datos en clusters según similitud.
+                                    </li>
+                                    <li>
+                                        DBSCAN: Detecta grupos de datos con densidad similar.
+                                    </li>
+                                    <li>
+                                        Algoritmos de Asociación (Apriori, FP-Growth): Encuentran relaciones entre datos
+                                    </li>
+                                    <li>
+                                        Análisis de Componentes Principales (PCA): Reduce la cantidad de variables manteniendo la información clave
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="concepTec">
+                    <!-- Contenido general de los temas 2-->
+                    <div id="info">
+                        <div id="cabTec">
+                            <p>Aprendizaje Por Refuerzo</p>
+                        </div>
+
+                        <div id="contenTec">
+                            <div id="conceptoTec">
+                                El modelo aprende a tomar decisiones a través de un sistema de recompensas y castigos. Se usa en robótica, videojuegos y optimización de sistemas.
+                                <div id="imagenes">
+                                    <img src="imagenes/ia1.jpg" alt="" id="imgTec">
+                                </div>
+                            </div>
+                            <div id="listaTec">
+                                <ul>
+                                    <li>
+                                        Q-Learning: Aprende a través de prueba y error sin un modelo del entorno.
+                                    </li>
+                                    <li>
+                                        Deep Q-Networks (DQN): Usa redes neuronales para mejorar el Q-Learning.
+                                    </li>
+                                    <li>
+                                        Algoritmos basados en Políticas (REINFORCE, PPO, A3C): Optimizan directamente las acciones para maximizar recompensas.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
